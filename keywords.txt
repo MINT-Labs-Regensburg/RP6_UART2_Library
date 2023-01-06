@@ -1,0 +1,38 @@
+#######################################
+# Syntax Coloring Map For RP6-Library
+#######################################
+
+#######################################
+# Datatypes, Classes & C++ Keywords
+# (KEYWORD1)
+#######################################
+
+RP6		KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+RP6		KEYWORD2
+~RP6	KEYWORD2
+begin	KEYWORD2
+start	KEYWORD2
+reset	KEYWORD2
+stop	KEYWORD2
+drive	KEYWORD2
+setLEDs	KEYWORD2
+
+#######################################
+# Setup & Loop Functions, the Serial
+# Keywords (KEYWORD3)
+#######################################
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+
+#######################################
+# Built-in Variables (LITERAL2)
+#######################################
+
