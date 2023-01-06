@@ -1,0 +1,7 @@
+Damit die flash.bat aus den Firmware-Verzeichnissen korrekt funktioniert,
+muss dem FlashWriter zuerst mitgeteilt werden, welche Einstellungen er verwenden soll.
+
+Dazu einfach die beigefügte "ConfigureFlashWriter.bat" den eigenen Einstellungen entsprechend 
+bearbeiten und starten.
+
+Danach funktioniert die flash.bat.

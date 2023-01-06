@@ -1,0 +1,1413 @@
+Archive member included because of file (symbol)
+
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+                              ../Library/RP6base/RP6RobotBase_SelfTest.o (__addsf3)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o) (__addsf3x)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3.o)
+                              ../Library/RP6base/RP6RobotBase_SelfTest.o (__divsf3)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3.o) (__divsf3x)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+                              ../Library/RP6base/RP6RobotBase_SelfTest.o (__fixsfsi)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixsfsi.o) (__fixunssfsi)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+                              ../Library/RP6base/RP6RobotBase_SelfTest.o (__floatunsisf)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_inf)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_nan)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_pscA)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_pscB)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o) (__fp_round)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_split3)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_zero)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                              ../Library/RP6base/RP6RobotBaseLib.o (__mulsi3)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+                              ../Library/RP6base/RP6RobotBase_SelfTest.o (__udivmodqi4)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                              ../Library/RP6base/RP6RobotBaseLib.o (__udivmodhi4)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                              ../Library/RP6base/RP6RobotBaseLib.o (__divmodhi4)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                              ../Library/RP6base/RP6RobotBaseLib.o (__udivmodsi4)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o (exit)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              ../Library/RP6base/RP6RobotBaseLib.o (__do_copy_data)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              RP6Remotrol_Base.o (__do_clear_bss)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(atoi.o)
+                              ../Library/RP6common/RP6RemotrolCommon.o (atoi)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+                              ../Library/RP6common/RP6uart.o (itoa)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(mul10.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(atoi.o) (__mulhi_const_10)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o) (strrev)
+
+Allocating common symbols
+Common symbol       size              file
+
+bumper_left         0x1               ../Library/RP6base/RP6RobotBaseLib.o
+preStop_R           0x2               ../Library/RP6base/RP6RobotBaseLib.o
+mright_des_speed    0x2               ../Library/RP6base/RP6RobotBaseLib.o
+params              0xc               ../Library/RP6common/RP6RemotrolCommon.o
+timer               0x2               RP6Remotrol_Base.o
+HasM32              0x1               ../Library/RP6common/RP6RemotrolCommon.o
+mleft_des_speed     0x2               ../Library/RP6base/RP6RobotBaseLib.o
+mleft_des_speed_tmp
+                    0x2               ../Library/RP6base/RP6RobotBaseLib.o
+lastTest            0x1e              ../Library/RP6base/RP6RobotBase_SelfTest.o
+uart_status         0x1               ../Library/RP6common/RP6uart.o
+motion_status       0x1               RP6Remotrol_Base.o
+sysStatACS          0x1               ../Library/RP6base/RP6RobotBaseLib.o
+ircomm_send         0x1               ../Library/RP6base/RP6RobotBaseLib.o
+overcurrent_error_clear
+                    0x1               ../Library/RP6base/RP6RobotBaseLib.o
+distanceToMove_R    0x2               ../Library/RP6base/RP6RobotBaseLib.o
+HasLCDM32           0x1               ../Library/RP6common/RP6RemotrolCommon.o
+HasSRF02            0x1               ../Library/RP6common/RP6RemotrolCommon.o
+acs_pulse           0x1               ../Library/RP6base/RP6RobotBaseLib.o
+HasServoM32         0x1               ../Library/RP6common/RP6RemotrolCommon.o
+left_i              0x2               ../Library/RP6base/RP6RobotBaseLib.o
+bumper_back_right   0x1               ../Library/RP6base/RP6RobotBaseLib.o
+IRCOMM_RC5_data     0x2               ../Library/RP6base/RP6RobotBaseLib.o
+HasRP6              0x1               ../Library/RP6common/RP6RemotrolCommon.o
+motor_control       0x1               ../Library/RP6base/RP6RobotBaseLib.o
+leds_on             0x1               ../Library/RP6base/RP6RobotBaseLib.o
+mleft_power         0x2               ../Library/RP6base/RP6RobotBaseLib.o
+mleft_speed         0x2               ../Library/RP6base/RP6RobotBaseLib.o
+preDecelerate_R     0x2               ../Library/RP6base/RP6RobotBaseLib.o
+text                0x32              ../Library/RP6common/RP6RemotrolCommon.o
+mright_des_speed_tmp
+                    0x2               ../Library/RP6base/RP6RobotBaseLib.o
+adc1                0x2               ../Library/RP6base/RP6RobotBaseLib.o
+adcLSL              0x2               ../Library/RP6base/RP6RobotBaseLib.o
+acs_timer           0x2               ../Library/RP6base/RP6RobotBaseLib.o
+preStop_L           0x2               ../Library/RP6base/RP6RobotBaseLib.o
+lastID              0x2               ../Library/RP6common/RP6RemotrolCommon.o
+mright_power        0x2               ../Library/RP6base/RP6RobotBaseLib.o
+bumper_back_left    0x1               ../Library/RP6base/RP6RobotBaseLib.o
+HasLCDM128          0x1               ../Library/RP6common/RP6RemotrolCommon.o
+mright_counter      0x2               ../Library/RP6base/RP6RobotBaseLib.o
+ircomm_data_tmp     0x2               ../Library/RP6base/RP6RobotBaseLib.o
+distanceToMove_L    0x2               ../Library/RP6base/RP6RobotBaseLib.o
+HasServoM128        0x1               ../Library/RP6common/RP6RemotrolCommon.o
+stopwatches         0x11              ../Library/RP6base/RP6RobotBaseLib.o
+overcurrent_timeout
+                    0x1               ../Library/RP6base/RP6RobotBaseLib.o
+obstacle_left       0x1               ../Library/RP6base/RP6RobotBaseLib.o
+overcurrent_errors  0x1               ../Library/RP6base/RP6RobotBaseLib.o
+overcurrent_timer   0x1               ../Library/RP6base/RP6RobotBaseLib.o
+statusLEDs          0x1               RP6Remotrol_Base.o
+mright_ptmp         0x1               ../Library/RP6base/RP6RobotBaseLib.o
+ircomm_data         0x2               ../Library/RP6base/RP6RobotBaseLib.o
+adcLSR              0x2               ../Library/RP6base/RP6RobotBaseLib.o
+speed_adjust_timer  0x1               ../Library/RP6base/RP6RobotBaseLib.o
+obstacle_right      0x1               ../Library/RP6base/RP6RobotBaseLib.o
+speed_timer         0x1               ../Library/RP6base/RP6RobotBaseLib.o
+right_i             0x2               ../Library/RP6base/RP6RobotBaseLib.o
+bumper_timer        0x1               ../Library/RP6base/RP6RobotBaseLib.o
+mright_dist         0x2               ../Library/RP6base/RP6RobotBaseLib.o
+preDecelerate_L     0x2               ../Library/RP6base/RP6RobotBaseLib.o
+mleft_counter       0x2               ../Library/RP6base/RP6RobotBaseLib.o
+HasSRF02_2          0x1               ../Library/RP6common/RP6RemotrolCommon.o
+adc0                0x2               ../Library/RP6base/RP6RobotBaseLib.o
+delay_timer         0x1               ../Library/RP6base/RP6RobotBaseLib.o
+HasM128             0x1               ../Library/RP6common/RP6RemotrolCommon.o
+adcMotorCurrentRight
+                    0x2               ../Library/RP6base/RP6RobotBaseLib.o
+ms_timer            0x1               ../Library/RP6base/RP6RobotBaseLib.o
+mright_speed        0x2               ../Library/RP6base/RP6RobotBaseLib.o
+mleft_dist          0x2               ../Library/RP6base/RP6RobotBaseLib.o
+bumper_right        0x1               ../Library/RP6base/RP6RobotBaseLib.o
+acs_event_counter   0x1               ../Library/RP6base/RP6RobotBaseLib.o
+motion_status_tmp   0x1               ../Library/RP6base/RP6RobotBaseLib.o
+adcBat              0x2               ../Library/RP6base/RP6RobotBaseLib.o
+uart_receive_buffer
+                    0x21              ../Library/RP6common/RP6uart.o
+IRCOMM_RC5_data_ok  0x2               ../Library/RP6base/RP6RobotBaseLib.o
+HasSRF02_1          0x1               ../Library/RP6common/RP6RemotrolCommon.o
+HasSRF08            0x1               ../Library/RP6common/RP6RemotrolCommon.o
+mleft_ptmp          0x1               ../Library/RP6base/RP6RobotBaseLib.o
+adcMotorCurrentLeft
+                    0x2               ../Library/RP6base/RP6RobotBaseLib.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+LOAD RP6Remotrol_Base.o
+LOAD ../Library/RP6base/RP6RobotBaseLib.o
+LOAD ../Library/RP6common/RP6uart.o
+LOAD ../Library/RP6common/RP6I2CmasterTWI.o
+LOAD ../Library/RP6base/PCConnection_Base.o
+LOAD ../Library/RP6base/SRF02ControlLibrary.o
+LOAD ../Library/RP6base/RP6RobotBase_SelfTest.o
+LOAD ../Library/RP6common/RP6RemotrolCommon.o
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x3bf2
+ *(.vectors)
+ .vectors       0x00000000       0x54 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x00000054      0x1be ../Library/RP6base/RP6RobotBaseLib.o
+ .progmem.data  0x00000212       0x95 ../Library/RP6base/PCConnection_Base.o
+ .progmem.data  0x000002a7      0x42d ../Library/RP6base/RP6RobotBase_SelfTest.o
+ .progmem.data  0x000006d4       0x7a ../Library/RP6common/RP6RemotrolCommon.o
+                0x0000074e                . = ALIGN (0x2)
+                0x0000074e                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000074e        0x0 linker stubs
+ *(.trampolines*)
+                0x0000074e                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000074e                __ctors_start = .
+ *(.ctors)
+                0x0000074e                __ctors_end = .
+                0x0000074e                __dtors_start = .
+ *(.dtors)
+                0x0000074e                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000074e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x0000074e                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000074e        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000075a       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x0000075a                __do_copy_data
+ .init4         0x00000770       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000770                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000780        0x8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init9)
+ *(.text)
+ .text          0x00000788        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000788                __vector_12
+                0x00000788                __bad_interrupt
+                0x00000788                __vector_6
+                0x00000788                __vector_11
+                0x00000788                __vector_17
+                0x00000788                __vector_7
+                0x00000788                __vector_5
+                0x00000788                __vector_9
+                0x00000788                __vector_15
+                0x00000788                __vector_8
+                0x00000788                __vector_14
+                0x00000788                __vector_16
+                0x00000788                __vector_18
+                0x00000788                __vector_20
+ .text          0x0000078c       0x1a RP6Remotrol_Base.o
+                0x0000078c                main
+ .text          0x000007a6     0x1462 ../Library/RP6base/RP6RobotBaseLib.o
+                0x000007a6                enablePowerOnWarning
+                0x0000136a                mSleep
+                0x000009e0                __vector_1
+                0x00000b00                setMotorPower
+                0x0000083e                getBumperRight
+                0x00000a60                MOTIONCONTROL_stateChanged_DUMMY
+                0x00000c98                IRCOMM_RC5dataReady_DUMMY
+                0x000007b4                disablePowerOnWarning
+                0x0000081a                setLEDs
+                0x000019d4                rotate
+                0x00000b1e                setMotorDir
+                0x00001392                extIntON
+                0x00000faa                powerOFF
+                0x0000135a                sleep
+                0x00000c4e                __vector_3
+                0x00000858                getBackBumperLeft
+                0x000007bc                updateStatusLEDs
+                0x00001386                delayCycles
+                0x00000b44                IRCOMM_sendRC5
+                0x00000f36                disableACS
+                0x00000872                getBackBumperRight
+                0x0000088e                BUMPERS_setStateChangedHandler
+                0x00000f84                setACSPwrMed
+                0x00000c9a                IRCOMM_setRC5DataReadyHandler
+                0x00000ca6                ACS_setStateChangedHandler
+                0x00000904                readADC
+                0x00001ada                move
+                0x00000824                getBumperLeft
+                0x00000cb0                task_ACS
+                0x00000a6c                moveAtSpeed
+                0x00000a8a                changeDirection
+                0x00000f8e                setACSPwrHigh
+                0x00000f6c                setACSPwrOff
+                0x00000f7a                setACSPwrLow
+                0x0000142a                emergencyShutdown
+                0x00000898                task_Bumpers
+                0x000019c2                task_RP6System
+                0x00000ca4                ACS_stateChanged_DUMMY
+                0x00000b8a                __vector_4
+                0x00000f50                enableACS
+                0x00000a20                __vector_2
+                0x00001398                extIntOFF
+                0x00000924                startADC
+                0x00000f98                powerON
+                0x00000a62                MOTIONCONTROL_setStateChangedHandler
+                0x00001514                task_motionControl
+                0x0000139e                initRobotBase
+                0x0000088c                BUMPERS_stateChanged_DUMMY
+                0x00000fce                __vector_10
+                0x00000ac6                stop
+                0x00000ab6                isMovementComplete
+                0x0000092e                task_ADC
+ .text          0x00001c08      0x230 ../Library/RP6common/RP6uart.o
+                0x00001cc4                readChar
+                0x00001d02                readChars
+                0x00001d4a                getBufferLength
+                0x00001d56                clearReceptionBuffer
+                0x00001c10                writeString
+                0x00001dba                writeIntegerLength
+                0x00001c56                __vector_13
+                0x00001d76                writeInteger
+                0x00001c08                writeChar
+                0x00001c38                writeStringLength
+                0x00001c24                writeNStringP
+ .text          0x00001e38      0x668 ../Library/RP6common/RP6I2CmasterTWI.o
+                0x00002342                I2CTWI_transmitBytes
+                0x00002266                I2CTWI_transmit3Bytes
+                0x000020b2                I2CTWI_readBytes
+                0x00001e54                I2CTWI_requestedDataReady_DUMMY
+                0x000021b0                I2CTWI_transmitByte
+                0x00001e38                __I2CTWI_initMaster
+                0x00001e6c                I2CTWI_delay
+                0x00001e62                I2CTWI_setTransmissionErrorHandler
+                0x00001f80                I2CTWI_requestDataFromDevice
+                0x00001e56                I2CTWI_setRequestedDataReadyHandler
+                0x000023bc                __vector_19
+                0x000022d0                I2CTWI_transmit4Bytes
+                0x00002030                I2CTWI_getState
+                0x00001e8c                task_I2CTWI
+                0x00001fbe                I2CTWI_requestRegisterFromDevice
+                0x00002206                I2CTWI_transmit2Bytes
+                0x00002006                I2CTWI_getReceivedData
+                0x00001e60                I2CTWI_transmissionError_DUMMY
+                0x0000203c                I2CTWI_readRegisters
+                0x0000213c                I2CTWI_readByte
+ .text          0x000024a0      0x47e ../Library/RP6base/PCConnection_Base.o
+                0x000024a0                InitializeFeatures
+                0x000024fc                printSensors
+                0x000024d0                initializeConnection
+                0x0000271a                task_Commands
+                0x000026f6                SendDebugData
+                0x000028ee                task_PCConnection
+ .text          0x0000291e      0x172 ../Library/RP6base/SRF02ControlLibrary.o
+                0x00002934                calculateAverageDist
+                0x0000299a                SRF02StartMeasurement
+                0x00002956                initSRF02
+                0x00002968                SRF02GetDistance
+                0x0000291e                SRF02IsReady
+                0x000029a4                task_SRF02
+ .text          0x00002a90      0x9d6 ../Library/RP6base/RP6RobotBase_SelfTest.o
+                0x000033c4                TestLEDs
+                0x00002b8c                TestEnd
+                0x00002d26                TestBumper
+                0x00002bc8                TestLightSensor
+                0x00002f32                TestBattery
+                0x00002b12                TestStart
+                0x00002a90                printUBat
+                0x00002e06                TestACS
+                0x00002ffa                TestMotor
+ .text          0x00003466      0x2da ../Library/RP6common/RP6RemotrolCommon.o
+                0x00003466                SerialHeartBeat
+                0x000034ea                cmdsplit
+                0x00003470                EndDebugFrame
+                0x0000371e                PrintError
+                0x0000348e                StartErrorFrame
+                0x000034a2                StartDataFrame
+                0x00003498                EndDataFrame
+                0x000035e0                getCommand
+                0x000035be                PrintDebug
+                0x0000347a                StartDebugFrame
+                0x00003484                EndErrorFrame
+                0x000034ac                printOK
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(atoi.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(mul10.o)
+ .text          0x00003740        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+                0x00003740                . = ALIGN (0x2)
+ *(.text.*)
+ .text.avr-libc.fplib
+                0x00003740        0xa c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+                0x00003740                __subsf3
+                0x00003742                __addsf3
+ .text.avr-libc.fplib
+                0x0000374a       0xc0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+                0x00003764                __addsf3x
+ .text.avr-libc.fplib
+                0x0000380a        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3.o)
+                0x0000380a                __divsf3
+ .text.avr-libc.fplib
+                0x0000380e       0xcc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                0x00003824                __divsf3x
+                0x00003828                __divsf3_pse
+ .text.avr-libc.fplib
+                0x000038da        0xa c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+                0x000038da                __fixsfsi
+ .text.avr-libc.fplib
+                0x000038e4       0x58 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+                0x000038e4                __fixunssfsi
+ .text.avr-libc.fplib
+                0x0000393c       0x7a c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+                0x00003940                __floatsisf
+                0x0000393c                __floatunsisf
+ .text.avr-libc.fplib
+                0x000039b6        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                0x000039b6                __fp_inf
+ .text.avr-libc.fplib
+                0x000039c2        0x6 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                0x000039c2                __fp_nan
+ .text.avr-libc.fplib
+                0x000039c8        0xe c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                0x000039c8                __fp_pscA
+ .text.avr-libc.fplib
+                0x000039d6        0xe c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                0x000039d6                __fp_pscB
+ .text.avr-libc.fplib
+                0x000039e4       0x22 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                0x000039e4                __fp_round
+ .text.avr-libc.fplib
+                0x00003a06       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                0x00003a06                __fp_split3
+                0x00003a16                __fp_splitA
+ .text.avr-libc.fplib
+                0x00003a4a        0xe c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                0x00003a4a                __fp_zero
+                0x00003a4c                __fp_szero
+ .text.libgcc   0x00003a58       0x3e c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                0x00003a58                __mulsi3
+ .text.libgcc   0x00003a96       0x18 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+                0x00003a96                __udivmodqi4
+ .text.libgcc   0x00003aae       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x00003aae                __udivmodhi4
+ .text.libgcc   0x00003ad6       0x26 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                0x00003ad6                __divmodhi4
+                0x00003ad6                _div
+ .text.libgcc   0x00003afc       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x00003afc                __udivmodsi4
+ .text.libgcc   0x00003b40        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00003b40        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00003b40        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x00003b40       0x3c c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(atoi.o)
+                0x00003b40                atoi
+ .text.avr-libc
+                0x00003b7c       0x42 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+                0x00003b7c                itoa
+ .text.avr-libc
+                0x00003bbe       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(mul10.o)
+                0x00003bbe                __mulhi_const_10
+ .text.avr-libc
+                0x00003bce       0x20 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+                0x00003bce                strrev
+                0x00003bee                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00003bee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00003bee                exit
+                0x00003bee                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00003bee        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00003bf2                _etext = .
+
+.data           0x00800060       0x8e load address 0x00003bf2
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .data          0x00800060        0x0 RP6Remotrol_Base.o
+ .data          0x00800060        0x9 ../Library/RP6base/RP6RobotBaseLib.o
+                0x00800060                acs_state
+ .data          0x00800069        0x0 ../Library/RP6common/RP6uart.o
+ .data          0x00800069        0x4 ../Library/RP6common/RP6I2CmasterTWI.o
+ .data          0x0080006d        0x3 ../Library/RP6base/PCConnection_Base.o
+                0x0080006d                timeBetweenFrames
+                0x0080006f                sendData
+ .data          0x00800070        0x3 ../Library/RP6base/SRF02ControlLibrary.o
+                0x00800070                SRF02_1_Status
+                0x00800072                SRF02_Last_Sensor
+                0x00800071                SRF02_2_Status
+ .data          0x00800073       0x47 ../Library/RP6base/RP6RobotBase_SelfTest.o
+ .data          0x008000ba       0x33 ../Library/RP6common/RP6RemotrolCommon.o
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(atoi.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(mul10.o)
+ .data          0x008000ed        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x008000ee                . = ALIGN (0x2)
+ *fill*         0x008000ed        0x1 00
+                0x008000ee                _edata = .
+                0x008000ee                PROVIDE (__data_end, .)
+
+.bss            0x008000ee      0x167
+                0x008000ee                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x008000ee        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x008000ee        0x0 RP6Remotrol_Base.o
+ .bss           0x008000ee       0x12 ../Library/RP6base/RP6RobotBaseLib.o
+                0x008000ee                mleft_des_dir
+                0x008000f2                drive_dir
+                0x008000ef                mright_des_dir
+                0x008000f1                mright_dir
+                0x008000f0                mleft_dir
+ .bss           0x00800100        0x6 ../Library/RP6common/RP6uart.o
+                0x00800102                read_size
+                0x00800101                write_pos
+                0x00800103                write_size
+                0x00800100                read_pos
+ .bss           0x00800106       0x4a ../Library/RP6common/RP6I2CmasterTWI.o
+                0x00800109                I2CTWI_request_reg
+                0x00800108                I2CTWI_request_adr
+                0x0080010b                I2CTWI_requestID
+                0x00800106                TWI_statusReg
+                0x00800107                TWI_TWSR_state
+                0x0080010d                TWI_operation
+                0x0080010a                I2CTWI_request_size
+ .bss           0x00800150        0x0 ../Library/RP6base/PCConnection_Base.o
+ .bss           0x00800150        0x7 ../Library/RP6base/SRF02ControlLibrary.o
+                0x00800152                SRF02_2_dist
+                0x00800150                SRF02_1_dist
+                0x00800154                SRF02_Is_Enabled
+                0x00800155                SRF02_Dist
+ .bss           0x00800157        0x4 ../Library/RP6base/RP6RobotBase_SelfTest.o
+ .bss           0x0080015b        0x2 ../Library/RP6common/RP6RemotrolCommon.o
+                0x0080015b                counter
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(atoi.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(mul10.o)
+ .bss           0x0080015d        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x0080015d        0x4 RP6Remotrol_Base.o
+                0x0080015d                timer
+                0x0080015f                motion_status
+                0x00800160                statusLEDs
+ COMMON         0x00800161       0x69 ../Library/RP6base/RP6RobotBaseLib.o
+                0x00800161                bumper_left
+                0x00800162                preStop_R
+                0x00800164                mright_des_speed
+                0x00800166                mleft_des_speed
+                0x00800168                mleft_des_speed_tmp
+                0x0080016a                sysStatACS
+                0x0080016b                ircomm_send
+                0x0080016c                overcurrent_error_clear
+                0x0080016d                distanceToMove_R
+                0x0080016f                acs_pulse
+                0x00800170                left_i
+                0x00800172                bumper_back_right
+                0x00800173                IRCOMM_RC5_data
+                0x00800175                motor_control
+                0x00800176                leds_on
+                0x00800177                mleft_power
+                0x00800179                mleft_speed
+                0x0080017b                preDecelerate_R
+                0x0080017d                mright_des_speed_tmp
+                0x0080017f                adc1
+                0x00800181                adcLSL
+                0x00800183                acs_timer
+                0x00800185                preStop_L
+                0x00800187                mright_power
+                0x00800189                bumper_back_left
+                0x0080018a                mright_counter
+                0x0080018c                ircomm_data_tmp
+                0x0080018e                distanceToMove_L
+                0x00800190                stopwatches
+                0x008001a1                overcurrent_timeout
+                0x008001a2                obstacle_left
+                0x008001a3                overcurrent_errors
+                0x008001a4                overcurrent_timer
+                0x008001a5                mright_ptmp
+                0x008001a6                ircomm_data
+                0x008001a8                adcLSR
+                0x008001aa                speed_adjust_timer
+                0x008001ab                obstacle_right
+                0x008001ac                speed_timer
+                0x008001ad                right_i
+                0x008001af                bumper_timer
+                0x008001b0                mright_dist
+                0x008001b2                preDecelerate_L
+                0x008001b4                mleft_counter
+                0x008001b6                adc0
+                0x008001b8                delay_timer
+                0x008001b9                adcMotorCurrentRight
+                0x008001bb                ms_timer
+                0x008001bc                mright_speed
+                0x008001be                mleft_dist
+                0x008001c0                bumper_right
+                0x008001c1                acs_event_counter
+                0x008001c2                motion_status_tmp
+                0x008001c3                adcBat
+                0x008001c5                IRCOMM_RC5_data_ok
+                0x008001c7                mleft_ptmp
+                0x008001c8                adcMotorCurrentLeft
+ COMMON         0x008001ca       0x22 ../Library/RP6common/RP6uart.o
+                0x008001ca                uart_status
+                0x008001cb                uart_receive_buffer
+ COMMON         0x008001ec       0x1e ../Library/RP6base/RP6RobotBase_SelfTest.o
+                0x008001ec                lastTest
+ COMMON         0x0080020a       0x4b ../Library/RP6common/RP6RemotrolCommon.o
+                0x0080020a                params
+                0x00800216                HasM32
+                0x00800217                HasLCDM32
+                0x00800218                HasSRF02
+                0x00800219                HasServoM32
+                0x0080021a                HasRP6
+                0x0080021b                text
+                0x0080024d                lastID
+                0x0080024f                HasLCDM128
+                0x00800250                HasServoM128
+                0x00800251                HasSRF02_2
+                0x00800252                HasM128
+                0x00800253                HasSRF02_1
+                0x00800254                HasSRF08
+                0x00800255                PROVIDE (__bss_end, .)
+                0x00003bf2                __data_load_start = LOADADDR (.data)
+                0x00003c80                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800255        0x0
+                0x00800255                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800255                PROVIDE (__noinit_end, .)
+                0x00800255                _end = .
+                0x00800255                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x100
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 RP6Remotrol_Base.o
+ .debug_aranges
+                0x00000020       0x20 ../Library/RP6base/RP6RobotBaseLib.o
+ .debug_aranges
+                0x00000040       0x20 ../Library/RP6common/RP6uart.o
+ .debug_aranges
+                0x00000060       0x20 ../Library/RP6common/RP6I2CmasterTWI.o
+ .debug_aranges
+                0x00000080       0x20 ../Library/RP6base/PCConnection_Base.o
+ .debug_aranges
+                0x000000a0       0x20 ../Library/RP6base/SRF02ControlLibrary.o
+ .debug_aranges
+                0x000000c0       0x20 ../Library/RP6base/RP6RobotBase_SelfTest.o
+ .debug_aranges
+                0x000000e0       0x20 ../Library/RP6common/RP6RemotrolCommon.o
+
+.debug_pubnames
+                0x00000000     0x111a
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x46 RP6Remotrol_Base.o
+ .debug_pubnames
+                0x00000046      0x868 ../Library/RP6base/RP6RobotBaseLib.o
+ .debug_pubnames
+                0x000008ae      0x138 ../Library/RP6common/RP6uart.o
+ .debug_pubnames
+                0x000009e6      0x2b9 ../Library/RP6common/RP6I2CmasterTWI.o
+ .debug_pubnames
+                0x00000c9f       0xdb ../Library/RP6base/PCConnection_Base.o
+ .debug_pubnames
+                0x00000d7a      0x135 ../Library/RP6base/SRF02ControlLibrary.o
+ .debug_pubnames
+                0x00000eaf       0xcc ../Library/RP6base/RP6RobotBase_SelfTest.o
+ .debug_pubnames
+                0x00000f7b      0x19f ../Library/RP6common/RP6RemotrolCommon.o
+
+.debug_info     0x00000000     0x4169
+ *(.debug_info)
+ .debug_info    0x00000000      0x21c RP6Remotrol_Base.o
+ .debug_info    0x0000021c     0x14e7 ../Library/RP6base/RP6RobotBaseLib.o
+ .debug_info    0x00001703      0x3fd ../Library/RP6common/RP6uart.o
+ .debug_info    0x00001b00      0x7e8 ../Library/RP6common/RP6I2CmasterTWI.o
+ .debug_info    0x000022e8      0x857 ../Library/RP6base/PCConnection_Base.o
+ .debug_info    0x00002b3f      0x4c0 ../Library/RP6base/SRF02ControlLibrary.o
+ .debug_info    0x00002fff      0xb9a ../Library/RP6base/RP6RobotBase_SelfTest.o
+ .debug_info    0x00003b99      0x5d0 ../Library/RP6common/RP6RemotrolCommon.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0xe90
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0xc3 RP6Remotrol_Base.o
+ .debug_abbrev  0x000000c3      0x35e ../Library/RP6base/RP6RobotBaseLib.o
+ .debug_abbrev  0x00000421      0x1da ../Library/RP6common/RP6uart.o
+ .debug_abbrev  0x000005fb      0x245 ../Library/RP6common/RP6I2CmasterTWI.o
+ .debug_abbrev  0x00000840      0x163 ../Library/RP6base/PCConnection_Base.o
+ .debug_abbrev  0x000009a3      0x1c6 ../Library/RP6base/SRF02ControlLibrary.o
+ .debug_abbrev  0x00000b69      0x1d7 ../Library/RP6base/RP6RobotBase_SelfTest.o
+ .debug_abbrev  0x00000d40      0x150 ../Library/RP6common/RP6RemotrolCommon.o
+
+.debug_line     0x00000000     0x348a
+ *(.debug_line)
+ .debug_line    0x00000000       0xed RP6Remotrol_Base.o
+ .debug_line    0x000000ed     0x15d3 ../Library/RP6base/RP6RobotBaseLib.o
+ .debug_line    0x000016c0      0x319 ../Library/RP6common/RP6uart.o
+ .debug_line    0x000019d9      0x6db ../Library/RP6common/RP6I2CmasterTWI.o
+ .debug_line    0x000020b4      0x4f9 ../Library/RP6base/PCConnection_Base.o
+ .debug_line    0x000025ad      0x234 ../Library/RP6base/SRF02ControlLibrary.o
+ .debug_line    0x000027e1      0x982 ../Library/RP6base/RP6RobotBase_SelfTest.o
+ .debug_line    0x00003163      0x327 ../Library/RP6common/RP6RemotrolCommon.o
+
+.debug_frame    0x00000000      0x7d0
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x20 RP6Remotrol_Base.o
+ .debug_frame   0x00000020      0x350 ../Library/RP6base/RP6RobotBaseLib.o
+ .debug_frame   0x00000370       0xc0 ../Library/RP6common/RP6uart.o
+ .debug_frame   0x00000430      0x150 ../Library/RP6common/RP6I2CmasterTWI.o
+ .debug_frame   0x00000580       0x70 ../Library/RP6base/PCConnection_Base.o
+ .debug_frame   0x000005f0       0x70 ../Library/RP6base/SRF02ControlLibrary.o
+ .debug_frame   0x00000660       0xa0 ../Library/RP6base/RP6RobotBase_SelfTest.o
+ .debug_frame   0x00000700       0xd0 ../Library/RP6common/RP6RemotrolCommon.o
+
+.debug_str      0x00000000     0x12dc
+ *(.debug_str)
+ .debug_str     0x00000000      0x120 RP6Remotrol_Base.o
+                                0x15a (size before relaxing)
+ .debug_str     0x00000120      0x8e9 ../Library/RP6base/RP6RobotBaseLib.o
+                                0xa87 (size before relaxing)
+ .debug_str     0x00000a09      0x198 ../Library/RP6common/RP6uart.o
+                                0x23e (size before relaxing)
+ .debug_str     0x00000ba1      0x340 ../Library/RP6common/RP6I2CmasterTWI.o
+                                0x459 (size before relaxing)
+ .debug_str     0x00000ee1      0x128 ../Library/RP6base/PCConnection_Base.o
+                                0x38b (size before relaxing)
+ .debug_str     0x00001009       0xf3 ../Library/RP6base/SRF02ControlLibrary.o
+                                0x29f (size before relaxing)
+ .debug_str     0x000010fc       0xe0 ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                0x324 (size before relaxing)
+ .debug_str     0x000011dc      0x100 ../Library/RP6common/RP6RemotrolCommon.o
+                                0x239 (size before relaxing)
+
+.debug_loc      0x00000000      0xf57
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x366 ../Library/RP6base/RP6RobotBaseLib.o
+ .debug_loc     0x00000366      0x120 ../Library/RP6common/RP6uart.o
+ .debug_loc     0x00000486      0x58b ../Library/RP6common/RP6I2CmasterTWI.o
+ .debug_loc     0x00000a11       0xc1 ../Library/RP6base/PCConnection_Base.o
+ .debug_loc     0x00000ad2       0x44 ../Library/RP6base/SRF02ControlLibrary.o
+ .debug_loc     0x00000b16      0x319 ../Library/RP6base/RP6RobotBase_SelfTest.o
+ .debug_loc     0x00000e2f      0x128 ../Library/RP6common/RP6RemotrolCommon.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(RP6Remotrol_Base.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000       0x48
+ .debug_ranges  0x00000000       0x48 ../Library/RP6common/RP6uart.o
+
+Cross Reference Table
+
+Symbol                                            File
+ACS_setStateChangedHandler                        ../Library/RP6base/RP6RobotBaseLib.o
+ACS_stateChanged_DUMMY                            ../Library/RP6base/RP6RobotBaseLib.o
+BUMPERS_setStateChangedHandler                    ../Library/RP6base/RP6RobotBaseLib.o
+BUMPERS_stateChanged_DUMMY                        ../Library/RP6base/RP6RobotBaseLib.o
+EndDataFrame                                      ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+EndDebugFrame                                     ../Library/RP6common/RP6RemotrolCommon.o
+EndErrorFrame                                     ../Library/RP6common/RP6RemotrolCommon.o
+HasLCDM128                                        ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+HasLCDM32                                         ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+HasM128                                           ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+HasM32                                            ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+HasRP6                                            ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+HasSRF02                                          ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+HasSRF02_1                                        ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+HasSRF02_2                                        ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+HasSRF08                                          ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+HasServoM128                                      ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+HasServoM32                                       ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+I2CTWI_delay                                      ../Library/RP6common/RP6I2CmasterTWI.o
+I2CTWI_getReceivedData                            ../Library/RP6common/RP6I2CmasterTWI.o
+I2CTWI_getState                                   ../Library/RP6common/RP6I2CmasterTWI.o
+I2CTWI_readByte                                   ../Library/RP6common/RP6I2CmasterTWI.o
+                                                  ../Library/RP6base/SRF02ControlLibrary.o
+I2CTWI_readBytes                                  ../Library/RP6common/RP6I2CmasterTWI.o
+I2CTWI_readRegisters                              ../Library/RP6common/RP6I2CmasterTWI.o
+I2CTWI_requestDataFromDevice                      ../Library/RP6common/RP6I2CmasterTWI.o
+I2CTWI_requestID                                  ../Library/RP6common/RP6I2CmasterTWI.o
+I2CTWI_requestRegisterFromDevice                  ../Library/RP6common/RP6I2CmasterTWI.o
+I2CTWI_request_adr                                ../Library/RP6common/RP6I2CmasterTWI.o
+I2CTWI_request_reg                                ../Library/RP6common/RP6I2CmasterTWI.o
+I2CTWI_request_size                               ../Library/RP6common/RP6I2CmasterTWI.o
+I2CTWI_requestedDataReady_DUMMY                   ../Library/RP6common/RP6I2CmasterTWI.o
+I2CTWI_setRequestedDataReadyHandler               ../Library/RP6common/RP6I2CmasterTWI.o
+I2CTWI_setTransmissionErrorHandler                ../Library/RP6common/RP6I2CmasterTWI.o
+I2CTWI_transmissionError_DUMMY                    ../Library/RP6common/RP6I2CmasterTWI.o
+I2CTWI_transmit2Bytes                             ../Library/RP6common/RP6I2CmasterTWI.o
+                                                  ../Library/RP6base/SRF02ControlLibrary.o
+I2CTWI_transmit3Bytes                             ../Library/RP6common/RP6I2CmasterTWI.o
+I2CTWI_transmit4Bytes                             ../Library/RP6common/RP6I2CmasterTWI.o
+I2CTWI_transmitByte                               ../Library/RP6common/RP6I2CmasterTWI.o
+                                                  ../Library/RP6base/SRF02ControlLibrary.o
+I2CTWI_transmitBytes                              ../Library/RP6common/RP6I2CmasterTWI.o
+IRCOMM_RC5_data                                   ../Library/RP6base/RP6RobotBaseLib.o
+IRCOMM_RC5_data_ok                                ../Library/RP6base/RP6RobotBaseLib.o
+IRCOMM_RC5dataReady_DUMMY                         ../Library/RP6base/RP6RobotBaseLib.o
+IRCOMM_sendRC5                                    ../Library/RP6base/RP6RobotBaseLib.o
+IRCOMM_setRC5DataReadyHandler                     ../Library/RP6base/RP6RobotBaseLib.o
+InitializeFeatures                                ../Library/RP6base/PCConnection_Base.o
+MOTIONCONTROL_setStateChangedHandler              ../Library/RP6base/RP6RobotBaseLib.o
+MOTIONCONTROL_stateChanged_DUMMY                  ../Library/RP6base/RP6RobotBaseLib.o
+PrintDebug                                        ../Library/RP6common/RP6RemotrolCommon.o
+PrintError                                        ../Library/RP6common/RP6RemotrolCommon.o
+SRF02GetDistance                                  ../Library/RP6base/SRF02ControlLibrary.o
+SRF02IsReady                                      ../Library/RP6base/SRF02ControlLibrary.o
+SRF02StartMeasurement                             ../Library/RP6base/SRF02ControlLibrary.o
+SRF02_1_Status                                    ../Library/RP6base/SRF02ControlLibrary.o
+SRF02_1_dist                                      ../Library/RP6base/SRF02ControlLibrary.o
+SRF02_2_Status                                    ../Library/RP6base/SRF02ControlLibrary.o
+SRF02_2_dist                                      ../Library/RP6base/SRF02ControlLibrary.o
+SRF02_Dist                                        ../Library/RP6base/SRF02ControlLibrary.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+SRF02_Is_Enabled                                  ../Library/RP6base/SRF02ControlLibrary.o
+SRF02_Last_Sensor                                 ../Library/RP6base/SRF02ControlLibrary.o
+SendDebugData                                     ../Library/RP6base/PCConnection_Base.o
+SerialHeartBeat                                   ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+StartDataFrame                                    ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+StartDebugFrame                                   ../Library/RP6common/RP6RemotrolCommon.o
+StartErrorFrame                                   ../Library/RP6common/RP6RemotrolCommon.o
+TWI_TWSR_state                                    ../Library/RP6common/RP6I2CmasterTWI.o
+TWI_operation                                     ../Library/RP6common/RP6I2CmasterTWI.o
+TWI_statusReg                                     ../Library/RP6common/RP6I2CmasterTWI.o
+TestACS                                           ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+TestBattery                                       ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+TestBumper                                        ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+TestEnd                                           ../Library/RP6base/RP6RobotBase_SelfTest.o
+TestLEDs                                          ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+TestLightSensor                                   ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+TestMotor                                         ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+TestStart                                         ../Library/RP6base/RP6RobotBase_SelfTest.o
+__I2CTWI_initMaster                               ../Library/RP6common/RP6I2CmasterTWI.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+__addsf3                                          c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+__addsf3x                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+__bad_interrupt                                   c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__bss_end                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+__bss_start                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+__data_end                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+__data_load_start                                 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+__data_start                                      c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+__divmodhi4                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+__divsf3                                          c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3.o)
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+__divsf3_pse                                      c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+__divsf3x                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3.o)
+__do_clear_bss                                    c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                                                  ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/SRF02ControlLibrary.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6common/RP6I2CmasterTWI.o
+                                                  ../Library/RP6common/RP6uart.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+                                                  RP6Remotrol_Base.o
+__do_copy_data                                    c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                                                  ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/SRF02ControlLibrary.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6common/RP6I2CmasterTWI.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+__fixsfsi                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+__fixunssfsi                                      c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+__floatsisf                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+__floatunsisf                                     c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+__fp_inf                                          c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+__fp_nan                                          c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+__fp_pscA                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+__fp_pscB                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+__fp_round                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+__fp_split3                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+__fp_splitA                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+__fp_szero                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+__fp_zero                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+__heap_end                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__init                                            c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__mulhi_const_10                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(mul10.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(atoi.o)
+__mulsi3                                          c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+__stack                                           c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__subsf3                                          c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(addsf3.o)
+__udivmodhi4                                      c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+__udivmodqi4                                      c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodqi4.o)
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+__udivmodsi4                                      c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+__vector_1                                        ../Library/RP6base/RP6RobotBaseLib.o
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_10                                       ../Library/RP6base/RP6RobotBaseLib.o
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_11                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_12                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_13                                       ../Library/RP6common/RP6uart.o
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_14                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_15                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_16                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_17                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_18                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_19                                       ../Library/RP6common/RP6I2CmasterTWI.o
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_2                                        ../Library/RP6base/RP6RobotBaseLib.o
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_20                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_3                                        ../Library/RP6base/RP6RobotBaseLib.o
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_4                                        ../Library/RP6base/RP6RobotBaseLib.o
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_5                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_6                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_7                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_8                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_9                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_default                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vectors                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+_div                                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+_exit                                             c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+acs_event_counter                                 ../Library/RP6base/RP6RobotBaseLib.o
+acs_pulse                                         ../Library/RP6base/RP6RobotBaseLib.o
+acs_state                                         ../Library/RP6base/RP6RobotBaseLib.o
+acs_timer                                         ../Library/RP6base/RP6RobotBaseLib.o
+adc0                                              ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+adc1                                              ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+adcBat                                            ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+adcLSL                                            ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+adcLSR                                            ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+adcMotorCurrentLeft                               ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+adcMotorCurrentRight                              ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+atoi                                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(atoi.o)
+                                                  ../Library/RP6common/RP6RemotrolCommon.o
+bumper_back_left                                  ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+bumper_back_right                                 ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+bumper_left                                       ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+bumper_right                                      ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+bumper_timer                                      ../Library/RP6base/RP6RobotBaseLib.o
+calculateAverageDist                              ../Library/RP6base/SRF02ControlLibrary.o
+changeDirection                                   ../Library/RP6base/RP6RobotBaseLib.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+clearReceptionBuffer                              ../Library/RP6common/RP6uart.o
+cmdsplit                                          ../Library/RP6common/RP6RemotrolCommon.o
+counter                                           ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+delayCycles                                       ../Library/RP6base/RP6RobotBaseLib.o
+delay_timer                                       ../Library/RP6base/RP6RobotBaseLib.o
+disableACS                                        ../Library/RP6base/RP6RobotBaseLib.o
+disablePowerOnWarning                             ../Library/RP6base/RP6RobotBaseLib.o
+distanceToMove_L                                  ../Library/RP6base/RP6RobotBaseLib.o
+distanceToMove_R                                  ../Library/RP6base/RP6RobotBaseLib.o
+drive_dir                                         ../Library/RP6base/RP6RobotBaseLib.o
+emergencyShutdown                                 ../Library/RP6base/RP6RobotBaseLib.o
+enableACS                                         ../Library/RP6base/RP6RobotBaseLib.o
+enablePowerOnWarning                              ../Library/RP6base/RP6RobotBaseLib.o
+exit                                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+extIntOFF                                         ../Library/RP6base/RP6RobotBaseLib.o
+extIntON                                          ../Library/RP6base/RP6RobotBaseLib.o
+getBackBumperLeft                                 ../Library/RP6base/RP6RobotBaseLib.o
+getBackBumperRight                                ../Library/RP6base/RP6RobotBaseLib.o
+getBufferLength                                   ../Library/RP6common/RP6uart.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+getBumperLeft                                     ../Library/RP6base/RP6RobotBaseLib.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+getBumperRight                                    ../Library/RP6base/RP6RobotBaseLib.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+getCommand                                        ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+initRobotBase                                     ../Library/RP6base/RP6RobotBaseLib.o
+                                                  RP6Remotrol_Base.o
+initSRF02                                         ../Library/RP6base/SRF02ControlLibrary.o
+initializeConnection                              ../Library/RP6base/PCConnection_Base.o
+                                                  RP6Remotrol_Base.o
+ircomm_data                                       ../Library/RP6base/RP6RobotBaseLib.o
+ircomm_data_tmp                                   ../Library/RP6base/RP6RobotBaseLib.o
+ircomm_send                                       ../Library/RP6base/RP6RobotBaseLib.o
+isMovementComplete                                ../Library/RP6base/RP6RobotBaseLib.o
+itoa                                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+                                                  ../Library/RP6common/RP6uart.o
+lastID                                            ../Library/RP6common/RP6RemotrolCommon.o
+lastTest                                          ../Library/RP6base/RP6RobotBase_SelfTest.o
+leds_on                                           ../Library/RP6base/RP6RobotBaseLib.o
+left_i                                            ../Library/RP6base/RP6RobotBaseLib.o
+mSleep                                            ../Library/RP6base/RP6RobotBaseLib.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+main                                              RP6Remotrol_Base.o
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+mleft_counter                                     ../Library/RP6base/RP6RobotBaseLib.o
+mleft_des_dir                                     ../Library/RP6base/RP6RobotBaseLib.o
+mleft_des_speed                                   ../Library/RP6base/RP6RobotBaseLib.o
+mleft_des_speed_tmp                               ../Library/RP6base/RP6RobotBaseLib.o
+mleft_dir                                         ../Library/RP6base/RP6RobotBaseLib.o
+mleft_dist                                        ../Library/RP6base/RP6RobotBaseLib.o
+mleft_power                                       ../Library/RP6base/RP6RobotBaseLib.o
+mleft_ptmp                                        ../Library/RP6base/RP6RobotBaseLib.o
+mleft_speed                                       ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+motion_status                                     ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/SRF02ControlLibrary.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+                                                  RP6Remotrol_Base.o
+motion_status_tmp                                 ../Library/RP6base/RP6RobotBaseLib.o
+motor_control                                     ../Library/RP6base/RP6RobotBaseLib.o
+move                                              ../Library/RP6base/RP6RobotBaseLib.o
+moveAtSpeed                                       ../Library/RP6base/RP6RobotBaseLib.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+mright_counter                                    ../Library/RP6base/RP6RobotBaseLib.o
+mright_des_dir                                    ../Library/RP6base/RP6RobotBaseLib.o
+mright_des_speed                                  ../Library/RP6base/RP6RobotBaseLib.o
+mright_des_speed_tmp                              ../Library/RP6base/RP6RobotBaseLib.o
+mright_dir                                        ../Library/RP6base/RP6RobotBaseLib.o
+mright_dist                                       ../Library/RP6base/RP6RobotBaseLib.o
+mright_power                                      ../Library/RP6base/RP6RobotBaseLib.o
+mright_ptmp                                       ../Library/RP6base/RP6RobotBaseLib.o
+mright_speed                                      ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+ms_timer                                          ../Library/RP6base/RP6RobotBaseLib.o
+obstacle_left                                     ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+obstacle_right                                    ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+overcurrent_error_clear                           ../Library/RP6base/RP6RobotBaseLib.o
+overcurrent_errors                                ../Library/RP6base/RP6RobotBaseLib.o
+overcurrent_timeout                               ../Library/RP6base/RP6RobotBaseLib.o
+overcurrent_timer                                 ../Library/RP6base/RP6RobotBaseLib.o
+params                                            ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+powerOFF                                          ../Library/RP6base/RP6RobotBaseLib.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+powerON                                           ../Library/RP6base/RP6RobotBaseLib.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  RP6Remotrol_Base.o
+preDecelerate_L                                   ../Library/RP6base/RP6RobotBaseLib.o
+preDecelerate_R                                   ../Library/RP6base/RP6RobotBaseLib.o
+preStop_L                                         ../Library/RP6base/RP6RobotBaseLib.o
+preStop_R                                         ../Library/RP6base/RP6RobotBaseLib.o
+printOK                                           ../Library/RP6common/RP6RemotrolCommon.o
+printSensors                                      ../Library/RP6base/PCConnection_Base.o
+printUBat                                         ../Library/RP6base/RP6RobotBase_SelfTest.o
+readADC                                           ../Library/RP6base/RP6RobotBaseLib.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+readChar                                          ../Library/RP6common/RP6uart.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+readChars                                         ../Library/RP6common/RP6uart.o
+read_pos                                          ../Library/RP6common/RP6uart.o
+read_size                                         ../Library/RP6common/RP6uart.o
+right_i                                           ../Library/RP6base/RP6RobotBaseLib.o
+rotate                                            ../Library/RP6base/RP6RobotBaseLib.o
+sendData                                          ../Library/RP6base/PCConnection_Base.o
+setACSPwrHigh                                     ../Library/RP6base/RP6RobotBaseLib.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+                                                  RP6Remotrol_Base.o
+setACSPwrLow                                      ../Library/RP6base/RP6RobotBaseLib.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+setACSPwrMed                                      ../Library/RP6base/RP6RobotBaseLib.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+setACSPwrOff                                      ../Library/RP6base/RP6RobotBaseLib.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+setLEDs                                           ../Library/RP6base/RP6RobotBaseLib.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+setMotorDir                                       ../Library/RP6base/RP6RobotBaseLib.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+setMotorPower                                     ../Library/RP6base/RP6RobotBaseLib.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+sleep                                             ../Library/RP6base/RP6RobotBaseLib.o
+speed_adjust_timer                                ../Library/RP6base/RP6RobotBaseLib.o
+speed_timer                                       ../Library/RP6base/RP6RobotBaseLib.o
+startADC                                          ../Library/RP6base/RP6RobotBaseLib.o
+statusLEDs                                        ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/SRF02ControlLibrary.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+                                                  RP6Remotrol_Base.o
+stop                                              ../Library/RP6base/RP6RobotBaseLib.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+stopwatches                                       ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/SRF02ControlLibrary.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+strrev                                            c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strrev.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(itoa.o)
+sysStatACS                                        ../Library/RP6base/RP6RobotBaseLib.o
+task_ACS                                          ../Library/RP6base/RP6RobotBaseLib.o
+task_ADC                                          ../Library/RP6base/RP6RobotBaseLib.o
+task_Bumpers                                      ../Library/RP6base/RP6RobotBaseLib.o
+task_Commands                                     ../Library/RP6base/PCConnection_Base.o
+task_I2CTWI                                       ../Library/RP6common/RP6I2CmasterTWI.o
+task_PCConnection                                 ../Library/RP6base/PCConnection_Base.o
+                                                  RP6Remotrol_Base.o
+task_RP6System                                    ../Library/RP6base/RP6RobotBaseLib.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  RP6Remotrol_Base.o
+task_SRF02                                        ../Library/RP6base/SRF02ControlLibrary.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+task_motionControl                                ../Library/RP6base/RP6RobotBaseLib.o
+text                                              ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+timeBetweenFrames                                 ../Library/RP6base/PCConnection_Base.o
+timer                                             ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/SRF02ControlLibrary.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+                                                  RP6Remotrol_Base.o
+uart_receive_buffer                               ../Library/RP6common/RP6uart.o
+uart_status                                       ../Library/RP6common/RP6uart.o
+updateStatusLEDs                                  ../Library/RP6base/RP6RobotBaseLib.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+writeChar                                         ../Library/RP6common/RP6uart.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+writeInteger                                      ../Library/RP6common/RP6uart.o
+                                                  ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+writeIntegerLength                                ../Library/RP6common/RP6uart.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+writeNStringP                                     ../Library/RP6common/RP6uart.o
+                                                  ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+                                                  ../Library/RP6base/PCConnection_Base.o
+                                                  ../Library/RP6base/RP6RobotBaseLib.o
+writeString                                       ../Library/RP6common/RP6uart.o
+                                                  ../Library/RP6common/RP6RemotrolCommon.o
+                                                  ../Library/RP6base/RP6RobotBase_SelfTest.o
+writeStringLength                                 ../Library/RP6common/RP6uart.o
+write_pos                                         ../Library/RP6common/RP6uart.o
+write_size                                        ../Library/RP6common/RP6uart.o

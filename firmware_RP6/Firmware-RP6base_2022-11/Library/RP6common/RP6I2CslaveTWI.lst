@@ -1,0 +1,245 @@
+   1               		.file	"RP6I2CslaveTWI.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	I2CTWI_initSlave
+  18               	I2CTWI_initSlave:
+  19               	.LFB2:
+  20               	.LM1:
+  21               	.LVL0:
+  22               	/* prologue: function */
+  23               	/* frame size = 0 */
+  24               	.LM2:
+  25               	/* #APP */
+  26               	 ;  40 "../../Library/RP6common/RP6I2CslaveTWI.c" 1
+  27 0000 F894      		cli
+  28               	 ;  0 "" 2
+  29               	.LM3:
+  30               	/* #NOAPP */
+  31 0002 82B9      		out 34-32,r24
+  32               	.LM4:
+  33 0004 8FEF      		ldi r24,lo8(-1)
+  34               	.LVL1:
+  35 0006 83B9      		out 35-32,r24
+  36               	.LM5:
+  37 0008 84E0      		ldi r24,lo8(4)
+  38 000a 86BF      		out 86-32,r24
+  39               	.LM6:
+  40               	/* #APP */
+  41               	 ;  44 "../../Library/RP6common/RP6I2CslaveTWI.c" 1
+  42 000c 7894      		sei
+  43               	 ;  0 "" 2
+  44               	.LM7:
+  45               	/* #NOAPP */
+  46 000e 85EC      		ldi r24,lo8(-59)
+  47 0010 86BF      		out 86-32,r24
+  48               	/* epilogue start */
+  49               	.LM8:
+  50 0012 0895      		ret
+  51               	.LFE2:
+  53               	.global	__vector_19
+  55               	__vector_19:
+  56               	.LFB3:
+  57               	.LM9:
+  58 0014 1F92      		push __zero_reg__
+  59 0016 0F92      		push r0
+  60 0018 0FB6      		in r0,__SREG__
+  61 001a 0F92      		push r0
+  62 001c 1124      		clr __zero_reg__
+  63 001e 8F93      		push r24
+  64 0020 9F93      		push r25
+  65 0022 EF93      		push r30
+  66 0024 FF93      		push r31
+  67               	/* prologue: Signal */
+  68               	/* frame size = 0 */
+  69               	.LM10:
+  70 0026 81B1      		in r24,33-32
+  71 0028 8039      		cpi r24,lo8(-112)
+  72 002a 01F4      		brne .+2
+  73 002c 00C0      		rjmp .L8
+  74 002e 8139      		cpi r24,lo8(-111)
+  75 0030 00F4      		brsh .L13
+  76 0032 8037      		cpi r24,lo8(112)
+  77 0034 01F4      		brne .+2
+  78 0036 00C0      		rjmp .L6
+  79 0038 8038      		cpi r24,lo8(-128)
+  80 003a 01F0      		breq .L7
+  81 003c 8036      		cpi r24,lo8(96)
+  82 003e 01F0      		breq .+2
+  83 0040 00C0      		rjmp .L4
+  84 0042 00C0      		rjmp .L24
+  85               	.L13:
+  86 0044 883A      		cpi r24,lo8(-88)
+  87 0046 01F0      		breq .L10
+  88 0048 893A      		cpi r24,lo8(-87)
+  89 004a 00F4      		brsh .L14
+  90 004c 803A      		cpi r24,lo8(-96)
+  91 004e 01F0      		breq .+2
+  92 0050 00C0      		rjmp .L4
+  93 0052 00C0      		rjmp .L25
+  94               	.L14:
+  95 0054 883B      		cpi r24,lo8(-72)
+  96 0056 01F0      		breq .L11
+  97 0058 803C      		cpi r24,lo8(-64)
+  98 005a 01F0      		breq .+2
+  99 005c 00C0      		rjmp .L4
+ 100 005e 00C0      		rjmp .L26
+ 101               	.L10:
+ 102               	.LM11:
+ 103 0060 84E0      		ldi r24,lo8(4)
+ 104 0062 8093 0000 		sts TWI_state.1240,r24
+ 105               	.LM12:
+ 106 0066 81E0      		ldi r24,lo8(1)
+ 107 0068 8093 0000 		sts I2CTWI_readBusy,r24
+ 108               	.L11:
+ 109               	.LM13:
+ 110 006c 8091 0000 		lds r24,TWI_state.1240
+ 111 0070 8430      		cpi r24,lo8(4)
+ 112 0072 01F4      		brne .L21
+ 113               	.LM14:
+ 114 0074 8091 0000 		lds r24,current_register.1239
+ 115 0078 E82F      		mov r30,r24
+ 116 007a F0E0      		ldi r31,lo8(0)
+ 117 007c E050      		subi r30,lo8(-(I2CTWI_readRegisters))
+ 118 007e F040      		sbci r31,hi8(-(I2CTWI_readRegisters))
+ 119 0080 9081      		ld r25,Z
+ 120 0082 93B9      		out 35-32,r25
+ 121 0084 00C0      		rjmp .L22
+ 122               	.L26:
+ 123               	.LM15:
+ 124 0086 1092 0000 		sts TWI_state.1240,__zero_reg__
+ 125               	.LM16:
+ 126 008a 1092 0000 		sts current_register.1239,__zero_reg__
+ 127               	.LM17:
+ 128 008e 1092 0000 		sts I2CTWI_readBusy,__zero_reg__
+ 129               	.LM18:
+ 130 0092 81E0      		ldi r24,lo8(1)
+ 131 0094 8093 0000 		sts I2CTWI_dataWasRead,r24
+ 132 0098 00C0      		rjmp .L21
+ 133               	.L24:
+ 134               	.LM19:
+ 135 009a 81E0      		ldi r24,lo8(1)
+ 136 009c 8093 0000 		sts I2CTWI_writeBusy,r24
+ 137               	.LM20:
+ 138 00a0 82E0      		ldi r24,lo8(2)
+ 139 00a2 00C0      		rjmp .L23
+ 140               	.L7:
+ 141               	.LM21:
+ 142 00a4 8091 0000 		lds r24,TWI_state.1240
+ 143 00a8 8230      		cpi r24,lo8(2)
+ 144 00aa 01F4      		brne .L17
+ 145               	.LM22:
+ 146 00ac 83B1      		in r24,35-32
+ 147 00ae 8093 0000 		sts current_register.1239,r24
+ 148               	.LM23:
+ 149 00b2 8093 0000 		sts I2CTWI_dataReadFromReg,r24
+ 150               	.LM24:
+ 151 00b6 83E0      		ldi r24,lo8(3)
+ 152 00b8 00C0      		rjmp .L23
+ 153               	.L17:
+ 154               	.LM25:
+ 155 00ba 8330      		cpi r24,lo8(3)
+ 156 00bc 01F4      		brne .L21
+ 157               	.LM26:
+ 158 00be 8091 0000 		lds r24,current_register.1239
+ 159 00c2 E82F      		mov r30,r24
+ 160 00c4 F0E0      		ldi r31,lo8(0)
+ 161 00c6 93B1      		in r25,35-32
+ 162 00c8 E050      		subi r30,lo8(-(I2CTWI_writeRegisters))
+ 163 00ca F040      		sbci r31,hi8(-(I2CTWI_writeRegisters))
+ 164 00cc 9083      		st Z,r25
+ 165               	.L22:
+ 166 00ce 8F5F      		subi r24,lo8(-(1))
+ 167 00d0 8093 0000 		sts current_register.1239,r24
+ 168 00d4 00C0      		rjmp .L21
+ 169               	.L6:
+ 170               	.LM27:
+ 171 00d6 81E0      		ldi r24,lo8(1)
+ 172               	.L23:
+ 173 00d8 8093 0000 		sts TWI_state.1240,r24
+ 174 00dc 00C0      		rjmp .L21
+ 175               	.L8:
+ 176               	.LM28:
+ 177 00de 83B1      		in r24,35-32
+ 178 00e0 8093 0000 		sts I2CTWI_genCallCMD,r24
+ 179               	.L21:
+ 180               	.LM29:
+ 181 00e4 85EC      		ldi r24,lo8(-59)
+ 182 00e6 00C0      		rjmp .L20
+ 183               	.L25:
+ 184               	.LM30:
+ 185 00e8 85E0      		ldi r24,lo8(5)
+ 186 00ea 8093 0000 		sts TWI_state.1240,r24
+ 187               	.LM31:
+ 188 00ee 85EC      		ldi r24,lo8(-59)
+ 189 00f0 86BF      		out 86-32,r24
+ 190               	.LM32:
+ 191 00f2 1092 0000 		sts I2CTWI_writeBusy,__zero_reg__
+ 192 00f6 00C0      		rjmp .L19
+ 193               	.L4:
+ 194               	.LM33:
+ 195 00f8 84E8      		ldi r24,lo8(-124)
+ 196               	.L20:
+ 197 00fa 86BF      		out 86-32,r24
+ 198               	.L19:
+ 199               	/* epilogue start */
+ 200               	.LM34:
+ 201 00fc FF91      		pop r31
+ 202 00fe EF91      		pop r30
+ 203 0100 9F91      		pop r25
+ 204 0102 8F91      		pop r24
+ 205 0104 0F90      		pop r0
+ 206 0106 0FBE      		out __SREG__,r0
+ 207 0108 0F90      		pop r0
+ 208 010a 1F90      		pop __zero_reg__
+ 209 010c 1895      		reti
+ 210               	.LFE3:
+ 212               	.global	I2CTWI_dataWasRead
+ 213               	.global	I2CTWI_dataWasRead
+ 214               		.section .bss
+ 217               	I2CTWI_dataWasRead:
+ 218 0000 00        		.skip 1,0
+ 219               	.global	I2CTWI_dataReadFromReg
+ 220               	.global	I2CTWI_dataReadFromReg
+ 223               	I2CTWI_dataReadFromReg:
+ 224 0001 00        		.skip 1,0
+ 225               	.global	I2CTWI_readBusy
+ 226               	.global	I2CTWI_readBusy
+ 229               	I2CTWI_readBusy:
+ 230 0002 00        		.skip 1,0
+ 231               	.global	I2CTWI_writeBusy
+ 232               	.global	I2CTWI_writeBusy
+ 235               	I2CTWI_writeBusy:
+ 236 0003 00        		.skip 1,0
+ 237               		.lcomm TWI_state.1240,1
+ 238               		.lcomm current_register.1239,1
+ 239               		.comm I2CTWI_readRegisters,48,1
+ 240               		.comm I2CTWI_writeRegisters,16,1
+ 241               		.comm I2CTWI_genCallCMD,1,1
+ 274               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 RP6I2CslaveTWI.c
+C:\Users\Fabian\AppData\Local\Temp/ccEzmtBy.s:2      *ABS*:0000003f __SREG__
+C:\Users\Fabian\AppData\Local\Temp/ccEzmtBy.s:3      *ABS*:0000003e __SP_H__
+C:\Users\Fabian\AppData\Local\Temp/ccEzmtBy.s:4      *ABS*:0000003d __SP_L__
+C:\Users\Fabian\AppData\Local\Temp/ccEzmtBy.s:5      *ABS*:00000034 __CCP__
+C:\Users\Fabian\AppData\Local\Temp/ccEzmtBy.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\Fabian\AppData\Local\Temp/ccEzmtBy.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\Fabian\AppData\Local\Temp/ccEzmtBy.s:18     .text:00000000 I2CTWI_initSlave
+C:\Users\Fabian\AppData\Local\Temp/ccEzmtBy.s:55     .text:00000014 __vector_19
+                             .bss:00000004 TWI_state.1240
+C:\Users\Fabian\AppData\Local\Temp/ccEzmtBy.s:229    .bss:00000002 I2CTWI_readBusy
+C:\Users\Fabian\AppData\Local\Temp/ccEzmtBy.s:237    .bss:00000005 current_register.1239
+                            *COM*:00000030 I2CTWI_readRegisters
+C:\Users\Fabian\AppData\Local\Temp/ccEzmtBy.s:217    .bss:00000000 I2CTWI_dataWasRead
+C:\Users\Fabian\AppData\Local\Temp/ccEzmtBy.s:235    .bss:00000003 I2CTWI_writeBusy
+C:\Users\Fabian\AppData\Local\Temp/ccEzmtBy.s:223    .bss:00000001 I2CTWI_dataReadFromReg
+                            *COM*:00000010 I2CTWI_writeRegisters
+                            *COM*:00000001 I2CTWI_genCallCMD
+
+UNDEFINED SYMBOLS
+__do_clear_bss

@@ -1,0 +1,320 @@
+   1               		.file	"SRF02ControlLibrary.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	SRF02IsReady
+  18               	SRF02IsReady:
+  19               	.LFB6:
+  20               	.LM1:
+  21               	.LVL0:
+  22               	/* prologue: function */
+  23               	/* frame size = 0 */
+  24               	.LM2:
+  25 0000 8091 0000 		lds r24,stopwatches+13
+  26 0004 9091 0000 		lds r25,(stopwatches+13)+1
+  27               	.LVL1:
+  28 0008 20E0      		ldi r18,lo8(0)
+  29 000a 8634      		cpi r24,70
+  30 000c 9105      		cpc r25,__zero_reg__
+  31 000e 00F0      		brlo .L2
+  32 0010 21E0      		ldi r18,lo8(1)
+  33               	.L2:
+  34               	.LM3:
+  35 0012 822F      		mov r24,r18
+  36               	/* epilogue start */
+  37 0014 0895      		ret
+  38               	.LFE6:
+  40               	.global	calculateAverageDist
+  42               	calculateAverageDist:
+  43               	.LFB9:
+  44               	.LM4:
+  45               	/* prologue: function */
+  46               	/* frame size = 0 */
+  47               	.LM5:
+  48 0016 8091 0000 		lds r24,SRF02_2_dist
+  49 001a 9091 0000 		lds r25,(SRF02_2_dist)+1
+  50 001e 2091 0000 		lds r18,SRF02_1_dist
+  51 0022 3091 0000 		lds r19,(SRF02_1_dist)+1
+  52 0026 820F      		add r24,r18
+  53 0028 931F      		adc r25,r19
+  54 002a 9695      		lsr r25
+  55 002c 8795      		ror r24
+  56 002e 9093 0000 		sts (SRF02_Dist)+1,r25
+  57 0032 8093 0000 		sts SRF02_Dist,r24
+  58               	/* epilogue start */
+  59               	.LM6:
+  60 0036 0895      		ret
+  61               	.LFE9:
+  63               	.global	initSRF02
+  65               	initSRF02:
+  66               	.LFB10:
+  67               	.LM7:
+  68               	/* prologue: function */
+  69               	/* frame size = 0 */
+  70               	.LM8:
+  71 0038 81E0      		ldi r24,lo8(1)
+  72 003a 8093 0000 		sts SRF02_Is_Enabled,r24
+  73               	.LM9:
+  74 003e 8091 0000 		lds r24,stopwatches
+  75 0042 8064      		ori r24,lo8(64)
+  76 0044 8093 0000 		sts stopwatches,r24
+  77               	/* epilogue start */
+  78               	.LM10:
+  79 0048 0895      		ret
+  80               	.LFE10:
+  82               	.global	SRF02GetDistance
+  84               	SRF02GetDistance:
+  85               	.LFB8:
+  86               	.LM11:
+  87               	.LVL2:
+  88 004a 0F93      		push r16
+  89 004c 1F93      		push r17
+  90               	/* prologue: function */
+  91               	/* frame size = 0 */
+  92 004e 182F      		mov r17,r24
+  93               	.LM12:
+  94 0050 63E0      		ldi r22,lo8(3)
+  95 0052 0E94 0000 		call I2CTWI_transmitByte
+  96               	.LVL3:
+  97               	.LM13:
+  98 0056 812F      		mov r24,r17
+  99 0058 0E94 0000 		call I2CTWI_readByte
+ 100 005c 082F      		mov r16,r24
+ 101               	.LM14:
+ 102 005e 812F      		mov r24,r17
+ 103 0060 62E0      		ldi r22,lo8(2)
+ 104 0062 0E94 0000 		call I2CTWI_transmitByte
+ 105               	.LM15:
+ 106 0066 812F      		mov r24,r17
+ 107 0068 0E94 0000 		call I2CTWI_readByte
+ 108 006c 382F      		mov r19,r24
+ 109 006e 20E0      		ldi r18,lo8(0)
+ 110 0070 200F      		add r18,r16
+ 111 0072 311D      		adc r19,__zero_reg__
+ 112               	.LM16:
+ 113 0074 C901      		movw r24,r18
+ 114               	/* epilogue start */
+ 115 0076 1F91      		pop r17
+ 116               	.LVL4:
+ 117 0078 0F91      		pop r16
+ 118 007a 0895      		ret
+ 119               	.LFE8:
+ 121               	.global	SRF02StartMeasurement
+ 123               	SRF02StartMeasurement:
+ 124               	.LFB7:
+ 125               	.LM17:
+ 126               	.LVL5:
+ 127               	/* prologue: function */
+ 128               	/* frame size = 0 */
+ 129               	.LM18:
+ 130 007c 60E0      		ldi r22,lo8(0)
+ 131 007e 41E5      		ldi r20,lo8(81)
+ 132 0080 0E94 0000 		call I2CTWI_transmit2Bytes
+ 133               	.LVL6:
+ 134               	/* epilogue start */
+ 135               	.LM19:
+ 136 0084 0895      		ret
+ 137               	.LFE7:
+ 139               	.global	task_SRF02
+ 141               	task_SRF02:
+ 142               	.LFB11:
+ 143               	.LM20:
+ 144 0086 1F93      		push r17
+ 145               	/* prologue: function */
+ 146               	/* frame size = 0 */
+ 147               	.LM21:
+ 148 0088 8091 0000 		lds r24,SRF02_Is_Enabled
+ 149 008c 8823      		tst r24
+ 150 008e 01F4      		brne .+2
+ 151 0090 00C0      		rjmp .L13
+ 152               	.LBB12:
+ 153               	.LBB13:
+ 154               	.LM22:
+ 155 0092 8091 0000 		lds r24,stopwatches+13
+ 156 0096 9091 0000 		lds r25,(stopwatches+13)+1
+ 157               	.LBE13:
+ 158               	.LBE12:
+ 159               	.LM23:
+ 160 009a 8634      		cpi r24,70
+ 161 009c 9105      		cpc r25,__zero_reg__
+ 162 009e 00F0      		brlo .L14
+ 163 00a0 8091 0000 		lds r24,SRF02_1_Status
+ 164 00a4 8823      		tst r24
+ 165 00a6 01F4      		brne .L14
+ 166               	.LBB14:
+ 167               	.LM24:
+ 168 00a8 80EE      		ldi r24,lo8(-32)
+ 169 00aa 0E94 0000 		call SRF02GetDistance
+ 170               	.LM25:
+ 171 00ae 9093 0000 		sts (SRF02_1_dist)+1,r25
+ 172 00b2 8093 0000 		sts SRF02_1_dist,r24
+ 173               	.LM26:
+ 174 00b6 81E0      		ldi r24,lo8(1)
+ 175 00b8 8093 0000 		sts SRF02_1_Status,r24
+ 176               	.LM27:
+ 177 00bc 0E94 0000 		call calculateAverageDist
+ 178               	.L14:
+ 179               	.LBE14:
+ 180               	.LBB15:
+ 181               	.LBB16:
+ 182               	.LM28:
+ 183 00c0 8091 0000 		lds r24,stopwatches+13
+ 184 00c4 9091 0000 		lds r25,(stopwatches+13)+1
+ 185               	.LBE16:
+ 186               	.LBE15:
+ 187               	.LM29:
+ 188 00c8 8634      		cpi r24,70
+ 189 00ca 9105      		cpc r25,__zero_reg__
+ 190 00cc 00F0      		brlo .L15
+ 191 00ce 8091 0000 		lds r24,SRF02_2_Status
+ 192 00d2 8823      		tst r24
+ 193 00d4 01F4      		brne .L15
+ 194               	.LBB17:
+ 195               	.LM30:
+ 196 00d6 82EE      		ldi r24,lo8(-30)
+ 197 00d8 0E94 0000 		call SRF02GetDistance
+ 198               	.LM31:
+ 199 00dc 9093 0000 		sts (SRF02_2_dist)+1,r25
+ 200 00e0 8093 0000 		sts SRF02_2_dist,r24
+ 201               	.LM32:
+ 202 00e4 81E0      		ldi r24,lo8(1)
+ 203 00e6 8093 0000 		sts SRF02_2_Status,r24
+ 204               	.LM33:
+ 205 00ea 0E94 0000 		call calculateAverageDist
+ 206               	.L15:
+ 207               	.LBE17:
+ 208               	.LM34:
+ 209 00ee 8091 0000 		lds r24,SRF02_1_Status
+ 210 00f2 8130      		cpi r24,lo8(1)
+ 211 00f4 01F4      		brne .L16
+ 212 00f6 8091 0000 		lds r24,SRF02_Last_Sensor
+ 213 00fa 8130      		cpi r24,lo8(1)
+ 214 00fc 01F4      		brne .L16
+ 215 00fe 8091 0000 		lds r24,SRF02_2_Status
+ 216 0102 8130      		cpi r24,lo8(1)
+ 217 0104 01F4      		brne .L16
+ 218               	.LBB18:
+ 219               	.LBB19:
+ 220               	.LM35:
+ 221 0106 80EE      		ldi r24,lo8(-32)
+ 222 0108 60E0      		ldi r22,lo8(0)
+ 223 010a 41E5      		ldi r20,lo8(81)
+ 224 010c 0E94 0000 		call I2CTWI_transmit2Bytes
+ 225               	.LBE19:
+ 226               	.LBE18:
+ 227               	.LM36:
+ 228 0110 1092 0000 		sts SRF02_1_Status,__zero_reg__
+ 229               	.LM37:
+ 230 0114 1092 0000 		sts SRF02_Last_Sensor,__zero_reg__
+ 231               	.LM38:
+ 232 0118 1092 0000 		sts (stopwatches+13)+1,__zero_reg__
+ 233 011c 1092 0000 		sts stopwatches+13,__zero_reg__
+ 234               	.L16:
+ 235               	.LM39:
+ 236 0120 8091 0000 		lds r24,SRF02_2_Status
+ 237 0124 8130      		cpi r24,lo8(1)
+ 238 0126 01F4      		brne .L18
+ 239 0128 8091 0000 		lds r24,SRF02_Last_Sensor
+ 240 012c 8823      		tst r24
+ 241 012e 01F4      		brne .L18
+ 242 0130 1091 0000 		lds r17,SRF02_1_Status
+ 243 0134 1130      		cpi r17,lo8(1)
+ 244 0136 01F4      		brne .L18
+ 245               	.LBB20:
+ 246               	.LBB21:
+ 247               	.LM40:
+ 248 0138 82EE      		ldi r24,lo8(-30)
+ 249 013a 60E0      		ldi r22,lo8(0)
+ 250 013c 41E5      		ldi r20,lo8(81)
+ 251 013e 0E94 0000 		call I2CTWI_transmit2Bytes
+ 252               	.LBE21:
+ 253               	.LBE20:
+ 254               	.LM41:
+ 255 0142 1092 0000 		sts SRF02_2_Status,__zero_reg__
+ 256               	.LM42:
+ 257 0146 1093 0000 		sts SRF02_Last_Sensor,r17
+ 258               	.LM43:
+ 259 014a 1092 0000 		sts (stopwatches+13)+1,__zero_reg__
+ 260 014e 1092 0000 		sts stopwatches+13,__zero_reg__
+ 261 0152 00C0      		rjmp .L18
+ 262               	.L13:
+ 263               	.LM44:
+ 264 0154 8091 0000 		lds r24,SRF02_Dist
+ 265 0158 9091 0000 		lds r25,(SRF02_Dist)+1
+ 266 015c 8F5F      		subi r24,lo8(-1)
+ 267 015e 9F4F      		sbci r25,hi8(-1)
+ 268 0160 01F0      		breq .L18
+ 269               	.LM45:
+ 270 0162 8FEF      		ldi r24,lo8(-1)
+ 271 0164 9FEF      		ldi r25,hi8(-1)
+ 272 0166 9093 0000 		sts (SRF02_Dist)+1,r25
+ 273 016a 8093 0000 		sts SRF02_Dist,r24
+ 274               	.L18:
+ 275               	/* epilogue start */
+ 276               	.LM46:
+ 277 016e 1F91      		pop r17
+ 278 0170 0895      		ret
+ 279               	.LFE11:
+ 281               	.global	SRF02_1_Status
+ 282               		.data
+ 285               	SRF02_1_Status:
+ 286 0000 01        		.byte	1
+ 287               	.global	SRF02_2_Status
+ 290               	SRF02_2_Status:
+ 291 0001 01        		.byte	1
+ 292               	.global	SRF02_Last_Sensor
+ 295               	SRF02_Last_Sensor:
+ 296 0002 01        		.byte	1
+ 297               	.global	SRF02_1_dist
+ 298               	.global	SRF02_1_dist
+ 299               		.section .bss
+ 302               	SRF02_1_dist:
+ 303 0000 0000      		.skip 2,0
+ 304               	.global	SRF02_2_dist
+ 305               	.global	SRF02_2_dist
+ 308               	SRF02_2_dist:
+ 309 0002 0000      		.skip 2,0
+ 310               	.global	SRF02_Is_Enabled
+ 311               	.global	SRF02_Is_Enabled
+ 314               	SRF02_Is_Enabled:
+ 315 0004 00        		.skip 1,0
+ 316               	.global	SRF02_Dist
+ 317               	.global	SRF02_Dist
+ 320               	SRF02_Dist:
+ 321 0005 0000      		.skip 2,0
+ 322               		.comm timer,2,1
+ 387               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 SRF02ControlLibrary.c
+C:\Users\Fabian\AppData\Local\Temp/ccg7ESRq.s:2      *ABS*:0000003f __SREG__
+C:\Users\Fabian\AppData\Local\Temp/ccg7ESRq.s:3      *ABS*:0000003e __SP_H__
+C:\Users\Fabian\AppData\Local\Temp/ccg7ESRq.s:4      *ABS*:0000003d __SP_L__
+C:\Users\Fabian\AppData\Local\Temp/ccg7ESRq.s:5      *ABS*:00000034 __CCP__
+C:\Users\Fabian\AppData\Local\Temp/ccg7ESRq.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\Fabian\AppData\Local\Temp/ccg7ESRq.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\Fabian\AppData\Local\Temp/ccg7ESRq.s:18     .text:00000000 SRF02IsReady
+C:\Users\Fabian\AppData\Local\Temp/ccg7ESRq.s:42     .text:00000016 calculateAverageDist
+C:\Users\Fabian\AppData\Local\Temp/ccg7ESRq.s:308    .bss:00000002 SRF02_2_dist
+C:\Users\Fabian\AppData\Local\Temp/ccg7ESRq.s:302    .bss:00000000 SRF02_1_dist
+C:\Users\Fabian\AppData\Local\Temp/ccg7ESRq.s:320    .bss:00000005 SRF02_Dist
+C:\Users\Fabian\AppData\Local\Temp/ccg7ESRq.s:65     .text:00000038 initSRF02
+C:\Users\Fabian\AppData\Local\Temp/ccg7ESRq.s:314    .bss:00000004 SRF02_Is_Enabled
+C:\Users\Fabian\AppData\Local\Temp/ccg7ESRq.s:84     .text:0000004a SRF02GetDistance
+C:\Users\Fabian\AppData\Local\Temp/ccg7ESRq.s:123    .text:0000007c SRF02StartMeasurement
+C:\Users\Fabian\AppData\Local\Temp/ccg7ESRq.s:141    .text:00000086 task_SRF02
+C:\Users\Fabian\AppData\Local\Temp/ccg7ESRq.s:285    .data:00000000 SRF02_1_Status
+C:\Users\Fabian\AppData\Local\Temp/ccg7ESRq.s:290    .data:00000001 SRF02_2_Status
+C:\Users\Fabian\AppData\Local\Temp/ccg7ESRq.s:295    .data:00000002 SRF02_Last_Sensor
+                            *COM*:00000002 timer
+
+UNDEFINED SYMBOLS
+stopwatches
+I2CTWI_transmitByte
+I2CTWI_readByte
+I2CTWI_transmit2Bytes
+__do_copy_data
+__do_clear_bss

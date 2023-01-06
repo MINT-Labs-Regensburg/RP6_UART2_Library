@@ -1,0 +1,504 @@
+   1               		.file	"RP6ControlServoLib.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	initSERVO
+  18               	initSERVO:
+  19               	.LFB6:
+  20               	.LM1:
+  21               	.LVL0:
+  22               	/* prologue: function */
+  23               	/* frame size = 0 */
+  24               	.LM2:
+  25 0000 8093 0000 		sts usedservos,r24
+  26               	.LM3:
+  27 0004 1092 0000 		sts (impulselength1)+1,__zero_reg__
+  28 0008 1092 0000 		sts impulselength1,__zero_reg__
+  29               	.LM4:
+  30 000c 1092 0000 		sts (impulselength2)+1,__zero_reg__
+  31 0010 1092 0000 		sts impulselength2,__zero_reg__
+  32               	.LM5:
+  33 0014 1092 0000 		sts (impulselength3)+1,__zero_reg__
+  34 0018 1092 0000 		sts impulselength3,__zero_reg__
+  35               	.LM6:
+  36 001c 1092 0000 		sts (impulselength4)+1,__zero_reg__
+  37 0020 1092 0000 		sts impulselength4,__zero_reg__
+  38               	.LM7:
+  39 0024 1092 0000 		sts (impulselength5)+1,__zero_reg__
+  40 0028 1092 0000 		sts impulselength5,__zero_reg__
+  41               	.LM8:
+  42 002c 1092 0000 		sts (impulselength6)+1,__zero_reg__
+  43 0030 1092 0000 		sts impulselength6,__zero_reg__
+  44               	.LM9:
+  45 0034 1092 0000 		sts (impulselength7)+1,__zero_reg__
+  46 0038 1092 0000 		sts impulselength7,__zero_reg__
+  47               	.LM10:
+  48 003c 1092 0000 		sts (impulselength8)+1,__zero_reg__
+  49 0040 1092 0000 		sts impulselength8,__zero_reg__
+  50               	.LM11:
+  51 0044 982F      		mov r25,r24
+  52 0046 80FF      		sbrs r24,0
+  53 0048 00C0      		rjmp .L2
+  54               	.LVL1:
+  55 004a A29A      		sbi 52-32,2
+  56 004c AA98      		cbi 53-32,2
+  57               	.L2:
+  58               	.LM12:
+  59 004e 91FF      		sbrs r25,1
+  60 0050 00C0      		rjmp .L3
+  61 0052 A39A      		sbi 52-32,3
+  62 0054 AB98      		cbi 53-32,3
+  63               	.L3:
+  64               	.LM13:
+  65 0056 92FF      		sbrs r25,2
+  66 0058 00C0      		rjmp .L4
+  67 005a A49A      		sbi 52-32,4
+  68 005c AC98      		cbi 53-32,4
+  69               	.L4:
+  70               	.LM14:
+  71 005e 93FF      		sbrs r25,3
+  72 0060 00C0      		rjmp .L5
+  73 0062 A59A      		sbi 52-32,5
+  74 0064 AD98      		cbi 53-32,5
+  75               	.L5:
+  76               	.LM15:
+  77 0066 94FF      		sbrs r25,4
+  78 0068 00C0      		rjmp .L6
+  79 006a A69A      		sbi 52-32,6
+  80 006c AE98      		cbi 53-32,6
+  81               	.L6:
+  82               	.LM16:
+  83 006e 95FF      		sbrs r25,5
+  84 0070 00C0      		rjmp .L7
+  85 0072 A79A      		sbi 52-32,7
+  86 0074 AF98      		cbi 53-32,7
+  87               	.L7:
+  88               	.LM17:
+  89 0076 96FF      		sbrs r25,6
+  90 0078 00C0      		rjmp .L8
+  91 007a 8D9A      		sbi 49-32,5
+  92 007c 9598      		cbi 50-32,5
+  93               	.L8:
+  94               	.LM18:
+  95 007e 87FF      		sbrs r24,7
+  96 0080 00C0      		rjmp .L9
+  97               	.LVL2:
+  98 0082 8E9A      		sbi 49-32,6
+  99 0084 9698      		cbi 50-32,6
+ 100               	.L9:
+ 101               	.LM19:
+ 102               	/* #APP */
+ 103               	 ;  97 "../../Library/RP6control/RP6ControlServoLib.c" 1
+ 104 0086 F894      		cli
+ 105               	 ;  0 "" 2
+ 106               	.LM20:
+ 107               	/* #NOAPP */
+ 108 0088 1FBC      		out 79-32,__zero_reg__
+ 109               	.LM21:
+ 110 008a 8AE0      		ldi r24,lo8(10)
+ 111               	.LVL3:
+ 112 008c 8EBD      		out 78-32,r24
+ 113               	.LM22:
+ 114 008e 83E1      		ldi r24,lo8(19)
+ 115 0090 90E0      		ldi r25,hi8(19)
+ 116 0092 9BBD      		out (74)+1-32,r25
+ 117 0094 8ABD      		out 74-32,r24
+ 118               	.LBB4:
+ 119               	.LBB5:
+ 120               	.LM23:
+ 121 0096 89B7      		in r24,89-32
+ 122 0098 8061      		ori r24,lo8(16)
+ 123 009a 89BF      		out 89-32,r24
+ 124               	.LM24:
+ 125 009c 81E0      		ldi r24,lo8(1)
+ 126 009e 8093 0000 		sts servo_on,r24
+ 127               	.LBE5:
+ 128               	.LBE4:
+ 129               	.LM25:
+ 130               	/* #APP */
+ 131               	 ;  127 "../../Library/RP6control/RP6ControlServoLib.c" 1
+ 132 00a2 7894      		sei
+ 133               	 ;  0 "" 2
+ 134               	.LM26:
+ 135               	/* #NOAPP */
+ 136 00a4 8091 0000 		lds r24,stopwatches
+ 137 00a8 8064      		ori r24,lo8(64)
+ 138 00aa 8093 0000 		sts stopwatches,r24
+ 139               	/* epilogue start */
+ 140               	.LM27:
+ 141 00ae 0895      		ret
+ 142               	.LFE6:
+ 144               	.global	startSERVO
+ 146               	startSERVO:
+ 147               	.LFB7:
+ 148               	.LM28:
+ 149               	/* prologue: function */
+ 150               	/* frame size = 0 */
+ 151               	.LM29:
+ 152 00b0 89B7      		in r24,89-32
+ 153 00b2 8061      		ori r24,lo8(16)
+ 154 00b4 89BF      		out 89-32,r24
+ 155               	.LM30:
+ 156 00b6 81E0      		ldi r24,lo8(1)
+ 157 00b8 8093 0000 		sts servo_on,r24
+ 158               	/* epilogue start */
+ 159               	.LM31:
+ 160 00bc 0895      		ret
+ 161               	.LFE7:
+ 163               	.global	stopSERVO
+ 165               	stopSERVO:
+ 166               	.LFB8:
+ 167               	.LM32:
+ 168               	/* prologue: function */
+ 169               	/* frame size = 0 */
+ 170               	.LM33:
+ 171 00be 89B7      		in r24,89-32
+ 172 00c0 8F7E      		andi r24,lo8(-17)
+ 173 00c2 89BF      		out 89-32,r24
+ 174               	.LM34:
+ 175 00c4 1092 0000 		sts servo_on,__zero_reg__
+ 176               	/* epilogue start */
+ 177               	.LM35:
+ 178 00c8 0895      		ret
+ 179               	.LFE8:
+ 181               	.global	pulseSERVO
+ 183               	pulseSERVO:
+ 184               	.LFB9:
+ 185               	.LM36:
+ 186               	/* prologue: function */
+ 187               	/* frame size = 0 */
+ 188               	.LM37:
+ 189 00ca 8091 0000 		lds r24,servo_on
+ 190 00ce 8823      		tst r24
+ 191 00d0 01F4      		brne .+2
+ 192 00d2 00C0      		rjmp .L25
+ 193               	.LM38:
+ 194 00d4 89EB      		ldi r24,lo8(185)
+ 195 00d6 90E0      		ldi r25,hi8(185)
+ 196 00d8 9093 0000 		sts (intcounter)+1,r25
+ 197 00dc 8093 0000 		sts intcounter,r24
+ 198               	.LM39:
+ 199 00e0 3091 0000 		lds r19,usedservos
+ 200 00e4 232F      		mov r18,r19
+ 201 00e6 30FF      		sbrs r19,0
+ 202 00e8 00C0      		rjmp .L17
+ 203               	.LM40:
+ 204 00ea AA9A      		sbi 53-32,2
+ 205 00ec 8091 0000 		lds r24,servo_position
+ 206 00f0 9091 0000 		lds r25,(servo_position)+1
+ 207 00f4 CD96      		adiw r24,61
+ 208 00f6 9093 0000 		sts (impulselength1)+1,r25
+ 209 00fa 8093 0000 		sts impulselength1,r24
+ 210               	.L17:
+ 211               	.LM41:
+ 212 00fe 21FF      		sbrs r18,1
+ 213 0100 00C0      		rjmp .L18
+ 214               	.LM42:
+ 215 0102 AB9A      		sbi 53-32,3
+ 216 0104 8091 0000 		lds r24,servo_position+2
+ 217 0108 9091 0000 		lds r25,(servo_position+2)+1
+ 218 010c CD96      		adiw r24,61
+ 219 010e 9093 0000 		sts (impulselength2)+1,r25
+ 220 0112 8093 0000 		sts impulselength2,r24
+ 221               	.L18:
+ 222               	.LM43:
+ 223 0116 22FF      		sbrs r18,2
+ 224 0118 00C0      		rjmp .L19
+ 225               	.LM44:
+ 226 011a AC9A      		sbi 53-32,4
+ 227 011c 8091 0000 		lds r24,servo_position+4
+ 228 0120 9091 0000 		lds r25,(servo_position+4)+1
+ 229 0124 CD96      		adiw r24,61
+ 230 0126 9093 0000 		sts (impulselength3)+1,r25
+ 231 012a 8093 0000 		sts impulselength3,r24
+ 232               	.L19:
+ 233               	.LM45:
+ 234 012e 23FF      		sbrs r18,3
+ 235 0130 00C0      		rjmp .L20
+ 236               	.LM46:
+ 237 0132 AD9A      		sbi 53-32,5
+ 238 0134 8091 0000 		lds r24,servo_position+6
+ 239 0138 9091 0000 		lds r25,(servo_position+6)+1
+ 240 013c CD96      		adiw r24,61
+ 241 013e 9093 0000 		sts (impulselength4)+1,r25
+ 242 0142 8093 0000 		sts impulselength4,r24
+ 243               	.L20:
+ 244               	.LM47:
+ 245 0146 24FF      		sbrs r18,4
+ 246 0148 00C0      		rjmp .L21
+ 247               	.LM48:
+ 248 014a AE9A      		sbi 53-32,6
+ 249 014c 8091 0000 		lds r24,servo_position+8
+ 250 0150 9091 0000 		lds r25,(servo_position+8)+1
+ 251 0154 CD96      		adiw r24,61
+ 252 0156 9093 0000 		sts (impulselength5)+1,r25
+ 253 015a 8093 0000 		sts impulselength5,r24
+ 254               	.L21:
+ 255               	.LM49:
+ 256 015e 25FF      		sbrs r18,5
+ 257 0160 00C0      		rjmp .L22
+ 258               	.LM50:
+ 259 0162 AF9A      		sbi 53-32,7
+ 260 0164 8091 0000 		lds r24,servo_position+10
+ 261 0168 9091 0000 		lds r25,(servo_position+10)+1
+ 262 016c CD96      		adiw r24,61
+ 263 016e 9093 0000 		sts (impulselength6)+1,r25
+ 264 0172 8093 0000 		sts impulselength6,r24
+ 265               	.L22:
+ 266               	.LM51:
+ 267 0176 26FF      		sbrs r18,6
+ 268 0178 00C0      		rjmp .L23
+ 269               	.LM52:
+ 270 017a 959A      		sbi 50-32,5
+ 271 017c 8091 0000 		lds r24,servo_position+12
+ 272 0180 9091 0000 		lds r25,(servo_position+12)+1
+ 273 0184 CD96      		adiw r24,61
+ 274 0186 9093 0000 		sts (impulselength7)+1,r25
+ 275 018a 8093 0000 		sts impulselength7,r24
+ 276               	.L23:
+ 277               	.LM53:
+ 278 018e 37FF      		sbrs r19,7
+ 279 0190 00C0      		rjmp .L24
+ 280               	.LM54:
+ 281 0192 969A      		sbi 50-32,6
+ 282 0194 8091 0000 		lds r24,servo_position+14
+ 283 0198 9091 0000 		lds r25,(servo_position+14)+1
+ 284 019c CD96      		adiw r24,61
+ 285 019e 9093 0000 		sts (impulselength8)+1,r25
+ 286 01a2 8093 0000 		sts impulselength8,r24
+ 287               	.L24:
+ 288               	.LM55:
+ 289 01a6 1092 0000 		sts (intcounter)+1,__zero_reg__
+ 290 01aa 1092 0000 		sts intcounter,__zero_reg__
+ 291               	.L25:
+ 292 01ae 0895      		ret
+ 293               	.LFE9:
+ 295               	.global	__vector_7
+ 297               	__vector_7:
+ 298               	.LFB10:
+ 299               	.LM56:
+ 300 01b0 1F92      		push __zero_reg__
+ 301 01b2 0F92      		push r0
+ 302 01b4 0FB6      		in r0,__SREG__
+ 303 01b6 0F92      		push r0
+ 304 01b8 1124      		clr __zero_reg__
+ 305 01ba 2F93      		push r18
+ 306 01bc 3F93      		push r19
+ 307 01be 8F93      		push r24
+ 308 01c0 9F93      		push r25
+ 309               	/* prologue: Signal */
+ 310               	/* frame size = 0 */
+ 311               	.LM57:
+ 312 01c2 8091 0000 		lds r24,intcounter
+ 313 01c6 9091 0000 		lds r25,(intcounter)+1
+ 314 01ca 0196      		adiw r24,1
+ 315 01cc 9093 0000 		sts (intcounter)+1,r25
+ 316 01d0 8093 0000 		sts intcounter,r24
+ 317               	.LM58:
+ 318 01d4 2091 0000 		lds r18,intcounter
+ 319 01d8 3091 0000 		lds r19,(intcounter)+1
+ 320 01dc 8091 0000 		lds r24,impulselength1
+ 321 01e0 9091 0000 		lds r25,(impulselength1)+1
+ 322 01e4 2817      		cp r18,r24
+ 323 01e6 3907      		cpc r19,r25
+ 324 01e8 01F4      		brne .L27
+ 325 01ea AA98      		cbi 53-32,2
+ 326               	.L27:
+ 327               	.LM59:
+ 328 01ec 2091 0000 		lds r18,intcounter
+ 329 01f0 3091 0000 		lds r19,(intcounter)+1
+ 330 01f4 8091 0000 		lds r24,impulselength2
+ 331 01f8 9091 0000 		lds r25,(impulselength2)+1
+ 332 01fc 2817      		cp r18,r24
+ 333 01fe 3907      		cpc r19,r25
+ 334 0200 01F4      		brne .L28
+ 335 0202 AB98      		cbi 53-32,3
+ 336               	.L28:
+ 337               	.LM60:
+ 338 0204 2091 0000 		lds r18,intcounter
+ 339 0208 3091 0000 		lds r19,(intcounter)+1
+ 340 020c 8091 0000 		lds r24,impulselength3
+ 341 0210 9091 0000 		lds r25,(impulselength3)+1
+ 342 0214 2817      		cp r18,r24
+ 343 0216 3907      		cpc r19,r25
+ 344 0218 01F4      		brne .L29
+ 345 021a AC98      		cbi 53-32,4
+ 346               	.L29:
+ 347               	.LM61:
+ 348 021c 2091 0000 		lds r18,intcounter
+ 349 0220 3091 0000 		lds r19,(intcounter)+1
+ 350 0224 8091 0000 		lds r24,impulselength4
+ 351 0228 9091 0000 		lds r25,(impulselength4)+1
+ 352 022c 2817      		cp r18,r24
+ 353 022e 3907      		cpc r19,r25
+ 354 0230 01F4      		brne .L30
+ 355 0232 AD98      		cbi 53-32,5
+ 356               	.L30:
+ 357               	.LM62:
+ 358 0234 2091 0000 		lds r18,intcounter
+ 359 0238 3091 0000 		lds r19,(intcounter)+1
+ 360 023c 8091 0000 		lds r24,impulselength5
+ 361 0240 9091 0000 		lds r25,(impulselength5)+1
+ 362 0244 2817      		cp r18,r24
+ 363 0246 3907      		cpc r19,r25
+ 364 0248 01F4      		brne .L31
+ 365 024a AE98      		cbi 53-32,6
+ 366               	.L31:
+ 367               	.LM63:
+ 368 024c 2091 0000 		lds r18,intcounter
+ 369 0250 3091 0000 		lds r19,(intcounter)+1
+ 370 0254 8091 0000 		lds r24,impulselength6
+ 371 0258 9091 0000 		lds r25,(impulselength6)+1
+ 372 025c 2817      		cp r18,r24
+ 373 025e 3907      		cpc r19,r25
+ 374 0260 01F4      		brne .L32
+ 375 0262 AF98      		cbi 53-32,7
+ 376               	.L32:
+ 377               	.LM64:
+ 378 0264 2091 0000 		lds r18,intcounter
+ 379 0268 3091 0000 		lds r19,(intcounter)+1
+ 380 026c 8091 0000 		lds r24,impulselength7
+ 381 0270 9091 0000 		lds r25,(impulselength7)+1
+ 382 0274 2817      		cp r18,r24
+ 383 0276 3907      		cpc r19,r25
+ 384 0278 01F4      		brne .L33
+ 385 027a 9598      		cbi 50-32,5
+ 386               	.L33:
+ 387               	.LM65:
+ 388 027c 2091 0000 		lds r18,intcounter
+ 389 0280 3091 0000 		lds r19,(intcounter)+1
+ 390 0284 8091 0000 		lds r24,impulselength8
+ 391 0288 9091 0000 		lds r25,(impulselength8)+1
+ 392 028c 2817      		cp r18,r24
+ 393 028e 3907      		cpc r19,r25
+ 394 0290 01F4      		brne .L35
+ 395 0292 9698      		cbi 50-32,6
+ 396               	.L35:
+ 397               	/* epilogue start */
+ 398               	.LM66:
+ 399 0294 9F91      		pop r25
+ 400 0296 8F91      		pop r24
+ 401 0298 3F91      		pop r19
+ 402 029a 2F91      		pop r18
+ 403 029c 0F90      		pop r0
+ 404 029e 0FBE      		out __SREG__,r0
+ 405 02a0 0F90      		pop r0
+ 406 02a2 1F90      		pop __zero_reg__
+ 407 02a4 1895      		reti
+ 408               	.LFE10:
+ 410               	.global	task_SERVO
+ 412               	task_SERVO:
+ 413               	.LFB11:
+ 414               	.LM67:
+ 415               	/* prologue: function */
+ 416               	/* frame size = 0 */
+ 417               	.LM68:
+ 418 02a6 8091 0000 		lds r24,stopwatches+13
+ 419 02aa 9091 0000 		lds r25,(stopwatches+13)+1
+ 420 02ae 0397      		sbiw r24,3
+ 421 02b0 00F0      		brlo .L37
+ 422 02b2 89B7      		in r24,89-32
+ 423 02b4 8F7E      		andi r24,lo8(-17)
+ 424 02b6 89BF      		out 89-32,r24
+ 425               	.L37:
+ 426               	.LM69:
+ 427 02b8 8091 0000 		lds r24,stopwatches+13
+ 428 02bc 9091 0000 		lds r25,(stopwatches+13)+1
+ 429 02c0 4597      		sbiw r24,21
+ 430 02c2 00F0      		brlo .L40
+ 431               	.LM70:
+ 432 02c4 0E94 0000 		call pulseSERVO
+ 433               	.LM71:
+ 434 02c8 8091 0000 		lds r24,servo_on
+ 435 02cc 8823      		tst r24
+ 436 02ce 01F0      		breq .L39
+ 437 02d0 89B7      		in r24,89-32
+ 438 02d2 8061      		ori r24,lo8(16)
+ 439 02d4 89BF      		out 89-32,r24
+ 440               	.L39:
+ 441               	.LM72:
+ 442 02d6 1092 0000 		sts (stopwatches+13)+1,__zero_reg__
+ 443 02da 1092 0000 		sts stopwatches+13,__zero_reg__
+ 444               	.L40:
+ 445 02de 0895      		ret
+ 446               	.LFE11:
+ 448               	.global	servo_on
+ 449               	.global	servo_on
+ 450               		.section .bss
+ 453               	servo_on:
+ 454 0000 00        		.skip 1,0
+ 455               	.global	impulselength1
+ 456               	.global	impulselength1
+ 459               	impulselength1:
+ 460 0001 0000      		.skip 2,0
+ 461               	.global	impulselength2
+ 462               	.global	impulselength2
+ 465               	impulselength2:
+ 466 0003 0000      		.skip 2,0
+ 467               	.global	impulselength3
+ 468               	.global	impulselength3
+ 471               	impulselength3:
+ 472 0005 0000      		.skip 2,0
+ 473               	.global	impulselength4
+ 474               	.global	impulselength4
+ 477               	impulselength4:
+ 478 0007 0000      		.skip 2,0
+ 479               	.global	impulselength5
+ 480               	.global	impulselength5
+ 483               	impulselength5:
+ 484 0009 0000      		.skip 2,0
+ 485               	.global	impulselength6
+ 486               	.global	impulselength6
+ 489               	impulselength6:
+ 490 000b 0000      		.skip 2,0
+ 491               	.global	impulselength7
+ 492               	.global	impulselength7
+ 495               	impulselength7:
+ 496 000d 0000      		.skip 2,0
+ 497               	.global	impulselength8
+ 498               	.global	impulselength8
+ 501               	impulselength8:
+ 502 000f 0000      		.skip 2,0
+ 503               	.global	intcounter
+ 504               	.global	intcounter
+ 507               	intcounter:
+ 508 0011 0000      		.skip 2,0
+ 509               		.comm timer,2,1
+ 510               		.comm servo_position,16,1
+ 511               		.comm usedservos,1,1
+ 576               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 RP6ControlServoLib.c
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:2      *ABS*:0000003f __SREG__
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:3      *ABS*:0000003e __SP_H__
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:4      *ABS*:0000003d __SP_L__
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:5      *ABS*:00000034 __CCP__
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:18     .text:00000000 initSERVO
+                            *COM*:00000001 usedservos
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:459    .bss:00000001 impulselength1
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:465    .bss:00000003 impulselength2
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:471    .bss:00000005 impulselength3
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:477    .bss:00000007 impulselength4
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:483    .bss:00000009 impulselength5
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:489    .bss:0000000b impulselength6
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:495    .bss:0000000d impulselength7
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:501    .bss:0000000f impulselength8
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:453    .bss:00000000 servo_on
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:146    .text:000000b0 startSERVO
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:165    .text:000000be stopSERVO
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:183    .text:000000ca pulseSERVO
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:507    .bss:00000011 intcounter
+                            *COM*:00000010 servo_position
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:297    .text:000001b0 __vector_7
+C:\Users\Fabian\AppData\Local\Temp/cc4rqJGd.s:412    .text:000002a6 task_SERVO
+                            *COM*:00000002 timer
+
+UNDEFINED SYMBOLS
+stopwatches
+__do_clear_bss

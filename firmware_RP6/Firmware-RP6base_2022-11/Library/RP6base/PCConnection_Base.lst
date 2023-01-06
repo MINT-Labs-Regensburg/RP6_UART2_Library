@@ -1,0 +1,851 @@
+   1               		.file	"PCConnection_Base.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	InitializeFeatures
+  18               	InitializeFeatures:
+  19               	.LFB6:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 81E0      		ldi r24,lo8(1)
+  25 0002 8093 0000 		sts HasRP6,r24
+  26               	.LM3:
+  27 0006 1092 0000 		sts HasM32,__zero_reg__
+  28               	.LM4:
+  29 000a 1092 0000 		sts HasM128,__zero_reg__
+  30               	.LM5:
+  31 000e 1092 0000 		sts HasServoM32,__zero_reg__
+  32               	.LM6:
+  33 0012 1092 0000 		sts HasServoM128,__zero_reg__
+  34               	.LM7:
+  35 0016 1092 0000 		sts HasLCDM32,__zero_reg__
+  36               	.LM8:
+  37 001a 1092 0000 		sts HasLCDM128,__zero_reg__
+  38               	.LM9:
+  39 001e 1092 0000 		sts HasSRF02,__zero_reg__
+  40               	.LM10:
+  41 0022 1092 0000 		sts HasSRF02_1,__zero_reg__
+  42               	.LM11:
+  43 0026 1092 0000 		sts HasSRF02_2,__zero_reg__
+  44               	.LM12:
+  45 002a 1092 0000 		sts HasSRF08,__zero_reg__
+  46               	/* epilogue start */
+  47               	.LM13:
+  48 002e 0895      		ret
+  49               	.LFE6:
+  51               	.global	initializeConnection
+  53               	initializeConnection:
+  54               	.LFB7:
+  55               	.LM14:
+  56               	/* prologue: function */
+  57               	/* frame size = 0 */
+  58               	.LM15:
+  59 0030 80E2      		ldi r24,lo8(32)
+  60 0032 0E94 0000 		call __I2CTWI_initMaster
+  61               	.LM16:
+  62 0036 0E94 0000 		call InitializeFeatures
+  63               	.LM17:
+  64 003a 1092 0000 		sts (stopwatches+1)+1,__zero_reg__
+  65 003e 1092 0000 		sts stopwatches+1,__zero_reg__
+  66               	.LM18:
+  67 0042 1092 0000 		sts (stopwatches+3)+1,__zero_reg__
+  68 0046 1092 0000 		sts stopwatches+3,__zero_reg__
+  69               	.LM19:
+  70 004a E0E0      		ldi r30,lo8(stopwatches+1)
+  71 004c F0E0      		ldi r31,hi8(stopwatches+1)
+  72 004e 8291      		ld r24,-Z
+  73 0050 8160      		ori r24,lo8(1)
+  74 0052 8083      		st Z,r24
+  75               	.LM20:
+  76 0054 8081      		ld r24,Z
+  77 0056 8260      		ori r24,lo8(2)
+  78 0058 8083      		st Z,r24
+  79               	/* epilogue start */
+  80               	.LM21:
+  81 005a 0895      		ret
+  82               	.LFE7:
+  84               	.global	printSensors
+  86               	printSensors:
+  87               	.LFB3:
+  88               	.LM22:
+  89               	/* prologue: function */
+  90               	/* frame size = 0 */
+  91               	.LM23:
+  92 005c 8091 0000 		lds r24,sendData
+  93 0060 8823      		tst r24
+  94 0062 01F4      		brne .+2
+  95 0064 00C0      		rjmp .L9
+  96               	.LM24:
+  97 0066 0E94 0000 		call StartDataFrame
+  98               	.LM25:
+  99 006a 8091 0000 		lds r24,HasRP6
+ 100 006e 8823      		tst r24
+ 101 0070 01F4      		brne .+2
+ 102 0072 00C0      		rjmp .L7
+ 103               	.LM26:
+ 104 0074 80E0      		ldi r24,lo8(__c.1924)
+ 105 0076 90E0      		ldi r25,hi8(__c.1924)
+ 106 0078 0E94 0000 		call writeNStringP
+ 107               	.LM27:
+ 108 007c 8091 0000 		lds r24,adcBat
+ 109 0080 9091 0000 		lds r25,(adcBat)+1
+ 110 0084 6AE0      		ldi r22,lo8(10)
+ 111 0086 0E94 0000 		call writeInteger
+ 112               	.LM28:
+ 113 008a 80E0      		ldi r24,lo8(__c.1926)
+ 114 008c 90E0      		ldi r25,hi8(__c.1926)
+ 115 008e 0E94 0000 		call writeNStringP
+ 116               	.LM29:
+ 117 0092 80E0      		ldi r24,lo8(__c.1928)
+ 118 0094 90E0      		ldi r25,hi8(__c.1928)
+ 119 0096 0E94 0000 		call writeNStringP
+ 120               	.LM30:
+ 121 009a 8091 0000 		lds r24,mleft_speed
+ 122 009e 9091 0000 		lds r25,(mleft_speed)+1
+ 123 00a2 6AE0      		ldi r22,lo8(10)
+ 124 00a4 0E94 0000 		call writeInteger
+ 125               	.LM31:
+ 126 00a8 80E0      		ldi r24,lo8(__c.1930)
+ 127 00aa 90E0      		ldi r25,hi8(__c.1930)
+ 128 00ac 0E94 0000 		call writeNStringP
+ 129               	.LM32:
+ 130 00b0 80E0      		ldi r24,lo8(__c.1932)
+ 131 00b2 90E0      		ldi r25,hi8(__c.1932)
+ 132 00b4 0E94 0000 		call writeNStringP
+ 133               	.LM33:
+ 134 00b8 8091 0000 		lds r24,mright_speed
+ 135 00bc 9091 0000 		lds r25,(mright_speed)+1
+ 136 00c0 6AE0      		ldi r22,lo8(10)
+ 137 00c2 0E94 0000 		call writeInteger
+ 138               	.LM34:
+ 139 00c6 80E0      		ldi r24,lo8(__c.1934)
+ 140 00c8 90E0      		ldi r25,hi8(__c.1934)
+ 141 00ca 0E94 0000 		call writeNStringP
+ 142               	.LM35:
+ 143 00ce 80E0      		ldi r24,lo8(__c.1936)
+ 144 00d0 90E0      		ldi r25,hi8(__c.1936)
+ 145 00d2 0E94 0000 		call writeNStringP
+ 146               	.LM36:
+ 147 00d6 8091 0000 		lds r24,adcMotorCurrentLeft
+ 148 00da 9091 0000 		lds r25,(adcMotorCurrentLeft)+1
+ 149 00de 6AE0      		ldi r22,lo8(10)
+ 150 00e0 0E94 0000 		call writeInteger
+ 151               	.LM37:
+ 152 00e4 80E0      		ldi r24,lo8(__c.1938)
+ 153 00e6 90E0      		ldi r25,hi8(__c.1938)
+ 154 00e8 0E94 0000 		call writeNStringP
+ 155               	.LM38:
+ 156 00ec 80E0      		ldi r24,lo8(__c.1940)
+ 157 00ee 90E0      		ldi r25,hi8(__c.1940)
+ 158 00f0 0E94 0000 		call writeNStringP
+ 159               	.LM39:
+ 160 00f4 8091 0000 		lds r24,adcMotorCurrentRight
+ 161 00f8 9091 0000 		lds r25,(adcMotorCurrentRight)+1
+ 162 00fc 6AE0      		ldi r22,lo8(10)
+ 163 00fe 0E94 0000 		call writeInteger
+ 164               	.LM40:
+ 165 0102 80E0      		ldi r24,lo8(__c.1942)
+ 166 0104 90E0      		ldi r25,hi8(__c.1942)
+ 167 0106 0E94 0000 		call writeNStringP
+ 168               	.LM41:
+ 169 010a 80E0      		ldi r24,lo8(__c.1944)
+ 170 010c 90E0      		ldi r25,hi8(__c.1944)
+ 171 010e 0E94 0000 		call writeNStringP
+ 172               	.LM42:
+ 173 0112 8091 0000 		lds r24,adcLSL
+ 174 0116 9091 0000 		lds r25,(adcLSL)+1
+ 175 011a 6AE0      		ldi r22,lo8(10)
+ 176 011c 0E94 0000 		call writeInteger
+ 177               	.LM43:
+ 178 0120 80E0      		ldi r24,lo8(__c.1946)
+ 179 0122 90E0      		ldi r25,hi8(__c.1946)
+ 180 0124 0E94 0000 		call writeNStringP
+ 181               	.LM44:
+ 182 0128 80E0      		ldi r24,lo8(__c.1948)
+ 183 012a 90E0      		ldi r25,hi8(__c.1948)
+ 184 012c 0E94 0000 		call writeNStringP
+ 185               	.LM45:
+ 186 0130 8091 0000 		lds r24,adcLSR
+ 187 0134 9091 0000 		lds r25,(adcLSR)+1
+ 188 0138 6AE0      		ldi r22,lo8(10)
+ 189 013a 0E94 0000 		call writeInteger
+ 190               	.LM46:
+ 191 013e 80E0      		ldi r24,lo8(__c.1950)
+ 192 0140 90E0      		ldi r25,hi8(__c.1950)
+ 193 0142 0E94 0000 		call writeNStringP
+ 194               	.LM47:
+ 195 0146 80E0      		ldi r24,lo8(__c.1952)
+ 196 0148 90E0      		ldi r25,hi8(__c.1952)
+ 197 014a 0E94 0000 		call writeNStringP
+ 198               	.LM48:
+ 199 014e 8091 0000 		lds r24,bumper_left
+ 200 0152 90E0      		ldi r25,lo8(0)
+ 201 0154 6AE0      		ldi r22,lo8(10)
+ 202 0156 0E94 0000 		call writeInteger
+ 203               	.LM49:
+ 204 015a 80E0      		ldi r24,lo8(__c.1954)
+ 205 015c 90E0      		ldi r25,hi8(__c.1954)
+ 206 015e 0E94 0000 		call writeNStringP
+ 207               	.LM50:
+ 208 0162 80E0      		ldi r24,lo8(__c.1956)
+ 209 0164 90E0      		ldi r25,hi8(__c.1956)
+ 210 0166 0E94 0000 		call writeNStringP
+ 211               	.LM51:
+ 212 016a 8091 0000 		lds r24,bumper_right
+ 213 016e 90E0      		ldi r25,lo8(0)
+ 214 0170 6AE0      		ldi r22,lo8(10)
+ 215 0172 0E94 0000 		call writeInteger
+ 216               	.LM52:
+ 217 0176 80E0      		ldi r24,lo8(__c.1958)
+ 218 0178 90E0      		ldi r25,hi8(__c.1958)
+ 219 017a 0E94 0000 		call writeNStringP
+ 220               	.LM53:
+ 221 017e 80E0      		ldi r24,lo8(__c.1960)
+ 222 0180 90E0      		ldi r25,hi8(__c.1960)
+ 223 0182 0E94 0000 		call writeNStringP
+ 224               	.LM54:
+ 225 0186 8091 0000 		lds r24,obstacle_left
+ 226 018a 90E0      		ldi r25,lo8(0)
+ 227 018c 6AE0      		ldi r22,lo8(10)
+ 228 018e 0E94 0000 		call writeInteger
+ 229               	.LM55:
+ 230 0192 80E0      		ldi r24,lo8(__c.1962)
+ 231 0194 90E0      		ldi r25,hi8(__c.1962)
+ 232 0196 0E94 0000 		call writeNStringP
+ 233               	.LM56:
+ 234 019a 80E0      		ldi r24,lo8(__c.1964)
+ 235 019c 90E0      		ldi r25,hi8(__c.1964)
+ 236 019e 0E94 0000 		call writeNStringP
+ 237               	.LM57:
+ 238 01a2 8091 0000 		lds r24,obstacle_right
+ 239 01a6 90E0      		ldi r25,lo8(0)
+ 240 01a8 6AE0      		ldi r22,lo8(10)
+ 241 01aa 0E94 0000 		call writeInteger
+ 242               	.LM58:
+ 243 01ae 80E0      		ldi r24,lo8(__c.1966)
+ 244 01b0 90E0      		ldi r25,hi8(__c.1966)
+ 245 01b2 0E94 0000 		call writeNStringP
+ 246               	.LM59:
+ 247 01b6 80E0      		ldi r24,lo8(__c.1968)
+ 248 01b8 90E0      		ldi r25,hi8(__c.1968)
+ 249 01ba 0E94 0000 		call writeNStringP
+ 250               	.LM60:
+ 251 01be 8091 0000 		lds r24,adc0
+ 252 01c2 9091 0000 		lds r25,(adc0)+1
+ 253 01c6 6AE0      		ldi r22,lo8(10)
+ 254 01c8 0E94 0000 		call writeInteger
+ 255               	.LM61:
+ 256 01cc 80E0      		ldi r24,lo8(__c.1970)
+ 257 01ce 90E0      		ldi r25,hi8(__c.1970)
+ 258 01d0 0E94 0000 		call writeNStringP
+ 259               	.LM62:
+ 260 01d4 80E0      		ldi r24,lo8(__c.1972)
+ 261 01d6 90E0      		ldi r25,hi8(__c.1972)
+ 262 01d8 0E94 0000 		call writeNStringP
+ 263               	.LM63:
+ 264 01dc 8091 0000 		lds r24,adc1
+ 265 01e0 9091 0000 		lds r25,(adc1)+1
+ 266 01e4 6AE0      		ldi r22,lo8(10)
+ 267 01e6 0E94 0000 		call writeInteger
+ 268               	.LM64:
+ 269 01ea 80E0      		ldi r24,lo8(__c.1974)
+ 270 01ec 90E0      		ldi r25,hi8(__c.1974)
+ 271 01ee 0E94 0000 		call writeNStringP
+ 272               	.LM65:
+ 273 01f2 80E0      		ldi r24,lo8(__c.1976)
+ 274 01f4 90E0      		ldi r25,hi8(__c.1976)
+ 275 01f6 0E94 0000 		call writeNStringP
+ 276               	.LM66:
+ 277 01fa 8091 0000 		lds r24,bumper_back_left
+ 278 01fe 90E0      		ldi r25,lo8(0)
+ 279 0200 6AE0      		ldi r22,lo8(10)
+ 280 0202 0E94 0000 		call writeInteger
+ 281               	.LM67:
+ 282 0206 80E0      		ldi r24,lo8(__c.1978)
+ 283 0208 90E0      		ldi r25,hi8(__c.1978)
+ 284 020a 0E94 0000 		call writeNStringP
+ 285               	.LM68:
+ 286 020e 80E0      		ldi r24,lo8(__c.1980)
+ 287 0210 90E0      		ldi r25,hi8(__c.1980)
+ 288 0212 0E94 0000 		call writeNStringP
+ 289               	.LM69:
+ 290 0216 8091 0000 		lds r24,bumper_back_right
+ 291 021a 90E0      		ldi r25,lo8(0)
+ 292 021c 6AE0      		ldi r22,lo8(10)
+ 293 021e 0E94 0000 		call writeInteger
+ 294               	.LM70:
+ 295 0222 80E0      		ldi r24,lo8(__c.1982)
+ 296 0224 90E0      		ldi r25,hi8(__c.1982)
+ 297 0226 0E94 0000 		call writeNStringP
+ 298               	.L7:
+ 299               	.LM71:
+ 300 022a 8091 0000 		lds r24,HasSRF02
+ 301 022e 8823      		tst r24
+ 302 0230 01F0      		breq .L8
+ 303               	.LM72:
+ 304 0232 80E0      		ldi r24,lo8(__c.1984)
+ 305 0234 90E0      		ldi r25,hi8(__c.1984)
+ 306 0236 0E94 0000 		call writeNStringP
+ 307               	.LM73:
+ 308 023a 8091 0000 		lds r24,SRF02_Dist
+ 309 023e 9091 0000 		lds r25,(SRF02_Dist)+1
+ 310 0242 6AE0      		ldi r22,lo8(10)
+ 311 0244 0E94 0000 		call writeInteger
+ 312               	.LM74:
+ 313 0248 80E0      		ldi r24,lo8(__c.1986)
+ 314 024a 90E0      		ldi r25,hi8(__c.1986)
+ 315 024c 0E94 0000 		call writeNStringP
+ 316               	.L8:
+ 317               	.LM75:
+ 318 0250 0E94 0000 		call EndDataFrame
+ 319               	.L9:
+ 320 0254 0895      		ret
+ 321               	.LFE3:
+ 323               	.global	SendDebugData
+ 325               	SendDebugData:
+ 326               	.LFB4:
+ 327               	.LM76:
+ 328               	/* prologue: function */
+ 329               	/* frame size = 0 */
+ 330               	.LM77:
+ 331 0256 2091 0000 		lds r18,stopwatches+1
+ 332 025a 3091 0000 		lds r19,(stopwatches+1)+1
+ 333 025e 8091 0000 		lds r24,timeBetweenFrames
+ 334 0262 9091 0000 		lds r25,(timeBetweenFrames)+1
+ 335 0266 8217      		cp r24,r18
+ 336 0268 9307      		cpc r25,r19
+ 337 026a 00F4      		brsh .L12
+ 338               	.LM78:
+ 339 026c 0E94 0000 		call printSensors
+ 340               	.LM79:
+ 341 0270 1092 0000 		sts (stopwatches+1)+1,__zero_reg__
+ 342 0274 1092 0000 		sts stopwatches+1,__zero_reg__
+ 343               	.L12:
+ 344 0278 0895      		ret
+ 345               	.LFE4:
+ 347               	.global	task_Commands
+ 349               	task_Commands:
+ 350               	.LFB2:
+ 351               	.LM80:
+ 352 027a 1F93      		push r17
+ 353               	/* prologue: function */
+ 354               	/* frame size = 0 */
+ 355               	.LM81:
+ 356 027c 0E94 0000 		call getBufferLength
+ 357 0280 8823      		tst r24
+ 358 0282 01F0      		breq .L14
+ 359               	.LBB2:
+ 360               	.LM82:
+ 361 0284 0E94 0000 		call readChar
+ 362 0288 182F      		mov r17,r24
+ 363               	.LVL0:
+ 364               	.LM83:
+ 365 028a 8332      		cpi r24,lo8(35)
+ 366 028c 01F4      		brne .L15
+ 367               	.LVL1:
+ 368               	.LM84:
+ 369 028e 8AE0      		ldi r24,lo8(10)
+ 370 0290 90E0      		ldi r25,hi8(10)
+ 371               	.LVL2:
+ 372 0292 0E94 0000 		call mSleep
+ 373               	.LM85:
+ 374 0296 1092 0000 		sts (counter)+1,__zero_reg__
+ 375 029a 1092 0000 		sts counter,__zero_reg__
+ 376               	.LVL3:
+ 377               	.L15:
+ 378               	.LM86:
+ 379 029e 8091 0000 		lds r24,counter
+ 380 02a2 9091 0000 		lds r25,(counter)+1
+ 381 02a6 FC01      		movw r30,r24
+ 382 02a8 E050      		subi r30,lo8(-(text))
+ 383 02aa F040      		sbci r31,hi8(-(text))
+ 384 02ac 1083      		st Z,r17
+ 385               	.LM87:
+ 386 02ae 0196      		adiw r24,1
+ 387               	.LVL4:
+ 388 02b0 FC01      		movw r30,r24
+ 389 02b2 E050      		subi r30,lo8(-(text))
+ 390 02b4 F040      		sbci r31,hi8(-(text))
+ 391 02b6 1082      		st Z,__zero_reg__
+ 392               	.LM88:
+ 393 02b8 9093 0000 		sts (counter)+1,r25
+ 394 02bc 8093 0000 		sts counter,r24
+ 395               	.L14:
+ 396               	.LBE2:
+ 397               	.LM89:
+ 398 02c0 0E94 0000 		call getCommand
+ 399               	.LVL5:
+ 400               	.LM90:
+ 401 02c4 0097      		sbiw r24,0
+ 402               	.LVL6:
+ 403 02c6 01F4      		brne .+2
+ 404 02c8 00C0      		rjmp .L44
+ 405               	.LM91:
+ 406 02ca 8730      		cpi r24,7
+ 407 02cc 9105      		cpc r25,__zero_reg__
+ 408 02ce 01F4      		brne .+2
+ 409 02d0 00C0      		rjmp .L20
+ 410 02d2 8830      		cpi r24,8
+ 411 02d4 9105      		cpc r25,__zero_reg__
+ 412 02d6 04F4      		brge .L24
+ 413 02d8 8330      		cpi r24,3
+ 414 02da 9105      		cpc r25,__zero_reg__
+ 415 02dc 01F0      		breq .L18
+ 416 02de 8630      		cpi r24,6
+ 417 02e0 9105      		cpc r25,__zero_reg__
+ 418 02e2 01F0      		breq .L19
+ 419 02e4 0197      		sbiw r24,1
+ 420 02e6 01F0      		breq .+2
+ 421 02e8 00C0      		rjmp .L44
+ 422 02ea 00C0      		rjmp .L45
+ 423               	.L24:
+ 424 02ec 8A30      		cpi r24,10
+ 425 02ee 9105      		cpc r25,__zero_reg__
+ 426 02f0 01F4      		brne .+2
+ 427 02f2 00C0      		rjmp .L22
+ 428 02f4 8B30      		cpi r24,11
+ 429 02f6 9105      		cpc r25,__zero_reg__
+ 430 02f8 01F4      		brne .+2
+ 431 02fa 00C0      		rjmp .L23
+ 432 02fc 0897      		sbiw r24,8
+ 433 02fe 01F0      		breq .+2
+ 434 0300 00C0      		rjmp .L44
+ 435 0302 00C0      		rjmp .L46
+ 436               	.L45:
+ 437               	.LM92:
+ 438 0304 8091 0000 		lds r24,params+2
+ 439               	.LVL7:
+ 440 0308 6091 0000 		lds r22,params+4
+ 441 030c 0E94 0000 		call moveAtSpeed
+ 442               	.LM93:
+ 443 0310 8091 0000 		lds r24,params+6
+ 444 0314 0E94 0000 		call changeDirection
+ 445 0318 00C0      		rjmp .L44
+ 446               	.LVL8:
+ 447               	.L18:
+ 448               	.LM94:
+ 449 031a 8091 0000 		lds r24,params+4
+ 450               	.LVL9:
+ 451 031e 0E94 0000 		call setLEDs
+ 452 0322 00C0      		rjmp .L44
+ 453               	.LVL10:
+ 454               	.L19:
+ 455               	.LM95:
+ 456 0324 8091 0000 		lds r24,params+2
+ 457 0328 9091 0000 		lds r25,(params+2)+1
+ 458               	.LVL11:
+ 459 032c 8830      		cpi r24,8
+ 460 032e 9105      		cpc r25,__zero_reg__
+ 461 0330 01F0      		breq .L27
+ 462 0332 8930      		cpi r24,9
+ 463 0334 9105      		cpc r25,__zero_reg__
+ 464 0336 04F4      		brge .L30
+ 465 0338 0097      		sbiw r24,0
+ 466 033a 01F0      		breq .L25
+ 467 033c 0797      		sbiw r24,7
+ 468 033e 01F0      		breq .+2
+ 469 0340 00C0      		rjmp .L44
+ 470 0342 00C0      		rjmp .L47
+ 471               	.L30:
+ 472 0344 8930      		cpi r24,9
+ 473 0346 9105      		cpc r25,__zero_reg__
+ 474 0348 01F0      		breq .L28
+ 475 034a 0A97      		sbiw r24,10
+ 476 034c 01F0      		breq .+2
+ 477 034e 00C0      		rjmp .L44
+ 478 0350 00C0      		rjmp .L48
+ 479               	.L25:
+ 480               	.LM96:
+ 481 0352 8091 0000 		lds r24,params+4
+ 482 0356 8093 0000 		sts HasRP6,r24
+ 483 035a 00C0      		rjmp .L44
+ 484               	.L47:
+ 485               	.LM97:
+ 486 035c 8091 0000 		lds r24,params+4
+ 487 0360 8093 0000 		sts HasSRF02,r24
+ 488 0364 00C0      		rjmp .L44
+ 489               	.L27:
+ 490               	.LM98:
+ 491 0366 8091 0000 		lds r24,params+4
+ 492 036a 8093 0000 		sts HasSRF02_1,r24
+ 493 036e 00C0      		rjmp .L44
+ 494               	.L28:
+ 495               	.LM99:
+ 496 0370 8091 0000 		lds r24,params+4
+ 497 0374 8093 0000 		sts HasSRF02_2,r24
+ 498 0378 00C0      		rjmp .L44
+ 499               	.L48:
+ 500               	.LM100:
+ 501 037a 8091 0000 		lds r24,params+4
+ 502 037e 8093 0000 		sts HasSRF08,r24
+ 503 0382 00C0      		rjmp .L44
+ 504               	.LVL12:
+ 505               	.L20:
+ 506               	.LM101:
+ 507 0384 0E94 0000 		call stop
+ 508               	.LVL13:
+ 509 0388 00C0      		rjmp .L44
+ 510               	.LVL14:
+ 511               	.L46:
+ 512               	.LM102:
+ 513 038a 2091 0000 		lds r18,params+2
+ 514 038e 3091 0000 		lds r19,(params+2)+1
+ 515 0392 37FF      		sbrs r19,7
+ 516 0394 00C0      		rjmp .L31
+ 517               	.LM103:
+ 518 0396 1092 0000 		sts sendData,__zero_reg__
+ 519               	.LM104:
+ 520 039a 88EE      		ldi r24,lo8(1000)
+ 521 039c 93E0      		ldi r25,hi8(1000)
+ 522               	.LVL15:
+ 523 039e 9093 0000 		sts (timeBetweenFrames)+1,r25
+ 524 03a2 8093 0000 		sts timeBetweenFrames,r24
+ 525 03a6 00C0      		rjmp .L44
+ 526               	.LVL16:
+ 527               	.L31:
+ 528               	.LM105:
+ 529 03a8 81E0      		ldi r24,lo8(1)
+ 530               	.LVL17:
+ 531 03aa 8093 0000 		sts sendData,r24
+ 532               	.LM106:
+ 533 03ae 3093 0000 		sts (timeBetweenFrames)+1,r19
+ 534 03b2 2093 0000 		sts timeBetweenFrames,r18
+ 535 03b6 00C0      		rjmp .L44
+ 536               	.LVL18:
+ 537               	.L22:
+ 538               	.LM107:
+ 539 03b8 8091 0000 		lds r24,params+2
+ 540 03bc 9091 0000 		lds r25,(params+2)+1
+ 541               	.LVL19:
+ 542 03c0 8130      		cpi r24,1
+ 543 03c2 9105      		cpc r25,__zero_reg__
+ 544 03c4 01F0      		breq .L33
+ 545 03c6 8230      		cpi r24,2
+ 546 03c8 9105      		cpc r25,__zero_reg__
+ 547 03ca 04F4      		brge .L36
+ 548 03cc 892B      		or r24,r25
+ 549 03ce 01F0      		breq .L32
+ 550 03d0 00C0      		rjmp .L44
+ 551               	.L36:
+ 552 03d2 8230      		cpi r24,2
+ 553 03d4 9105      		cpc r25,__zero_reg__
+ 554 03d6 01F0      		breq .L34
+ 555 03d8 0397      		sbiw r24,3
+ 556 03da 01F4      		brne .L44
+ 557 03dc 00C0      		rjmp .L49
+ 558               	.L32:
+ 559               	.LM108:
+ 560 03de 0E94 0000 		call setACSPwrOff
+ 561 03e2 00C0      		rjmp .L44
+ 562               	.L33:
+ 563               	.LM109:
+ 564 03e4 0E94 0000 		call setACSPwrLow
+ 565 03e8 00C0      		rjmp .L44
+ 566               	.L34:
+ 567               	.LM110:
+ 568 03ea 0E94 0000 		call setACSPwrMed
+ 569 03ee 00C0      		rjmp .L44
+ 570               	.L49:
+ 571               	.LM111:
+ 572 03f0 0E94 0000 		call setACSPwrHigh
+ 573 03f4 00C0      		rjmp .L44
+ 574               	.LVL20:
+ 575               	.L23:
+ 576               	.LM112:
+ 577 03f6 8091 0000 		lds r24,params+2
+ 578 03fa 9091 0000 		lds r25,(params+2)+1
+ 579               	.LVL21:
+ 580 03fe 8930      		cpi r24,9
+ 581 0400 9105      		cpc r25,__zero_reg__
+ 582 0402 01F0      		breq .L39
+ 583 0404 8A30      		cpi r24,10
+ 584 0406 9105      		cpc r25,__zero_reg__
+ 585 0408 04F4      		brge .L43
+ 586 040a 8230      		cpi r24,2
+ 587 040c 9105      		cpc r25,__zero_reg__
+ 588 040e 01F0      		breq .L37
+ 589 0410 0897      		sbiw r24,8
+ 590 0412 01F4      		brne .L44
+ 591 0414 00C0      		rjmp .L50
+ 592               	.L43:
+ 593 0416 8B30      		cpi r24,11
+ 594 0418 9105      		cpc r25,__zero_reg__
+ 595 041a 01F0      		breq .L41
+ 596 041c 8B30      		cpi r24,11
+ 597 041e 9105      		cpc r25,__zero_reg__
+ 598 0420 04F0      		brlt .L40
+ 599 0422 0C97      		sbiw r24,12
+ 600 0424 01F4      		brne .L44
+ 601 0426 00C0      		rjmp .L51
+ 602               	.L37:
+ 603               	.LM113:
+ 604 0428 0E94 0000 		call TestLEDs
+ 605 042c 00C0      		rjmp .L44
+ 606               	.L50:
+ 607               	.LM114:
+ 608 042e 0E94 0000 		call TestMotor
+ 609 0432 00C0      		rjmp .L44
+ 610               	.L39:
+ 611               	.LM115:
+ 612 0434 0E94 0000 		call TestBattery
+ 613 0438 00C0      		rjmp .L44
+ 614               	.L40:
+ 615               	.LM116:
+ 616 043a 0E94 0000 		call TestACS
+ 617 043e 00C0      		rjmp .L44
+ 618               	.L41:
+ 619               	.LM117:
+ 620 0440 0E94 0000 		call TestBumper
+ 621 0444 00C0      		rjmp .L44
+ 622               	.L51:
+ 623               	.LM118:
+ 624 0446 0E94 0000 		call TestLightSensor
+ 625               	.LVL22:
+ 626               	.L44:
+ 627               	/* epilogue start */
+ 628               	.LM119:
+ 629 044a 1F91      		pop r17
+ 630               	.LVL23:
+ 631 044c 0895      		ret
+ 632               	.LFE2:
+ 634               	.global	task_PCConnection
+ 636               	task_PCConnection:
+ 637               	.LFB5:
+ 638               	.LM120:
+ 639               	/* prologue: function */
+ 640               	/* frame size = 0 */
+ 641               	.LM121:
+ 642 044e 0E94 0000 		call task_Commands
+ 643               	.LM122:
+ 644 0452 8091 0000 		lds r24,HasSRF02
+ 645 0456 8823      		tst r24
+ 646 0458 01F0      		breq .L53
+ 647               	.LM123:
+ 648 045a 0E94 0000 		call task_SRF02
+ 649               	.L53:
+ 650               	.LM124:
+ 651 045e 0E94 0000 		call SendDebugData
+ 652               	.LM125:
+ 653 0462 8091 0000 		lds r24,stopwatches+3
+ 654 0466 9091 0000 		lds r25,(stopwatches+3)+1
+ 655 046a 845F      		subi r24,lo8(500)
+ 656 046c 9140      		sbci r25,hi8(500)
+ 657 046e 00F0      		brlo .L55
+ 658               	.LM126:
+ 659 0470 0E94 0000 		call SerialHeartBeat
+ 660               	.LM127:
+ 661 0474 1092 0000 		sts (stopwatches+3)+1,__zero_reg__
+ 662 0478 1092 0000 		sts stopwatches+3,__zero_reg__
+ 663               	.L55:
+ 664 047c 0895      		ret
+ 665               	.LFE5:
+ 667               	.global	timeBetweenFrames
+ 668               		.data
+ 671               	timeBetweenFrames:
+ 672 0000 C800      		.word	200
+ 673               	.global	sendData
+ 676               	sendData:
+ 677 0002 01        		.byte	1
+ 678               		.section	.progmem.data,"a",@progbits
+ 681               	__c.1986:
+ 682 0000 0A00      		.string	"\n"
+ 685               	__c.1984:
+ 686 0002 4469 7374 		.string	"Distance:"
+ 686      616E 6365 
+ 686      3A00 
+ 689               	__c.1982:
+ 690 000c 0A00      		.string	"\n"
+ 693               	__c.1980:
+ 694 000e 4275 6D70 		.string	"BumpHR:"
+ 694      4852 3A00 
+ 697               	__c.1978:
+ 698 0016 0A00      		.string	"\n"
+ 701               	__c.1976:
+ 702 0018 4275 6D70 		.string	"BumpHL:"
+ 702      484C 3A00 
+ 705               	__c.1974:
+ 706 0020 0A00      		.string	"\n"
+ 709               	__c.1972:
+ 710 0022 4144 4331 		.string	"ADC1:"
+ 710      3A00 
+ 713               	__c.1970:
+ 714 0028 0A00      		.string	"\n"
+ 717               	__c.1968:
+ 718 002a 4144 4330 		.string	"ADC0:"
+ 718      3A00 
+ 721               	__c.1966:
+ 722 0030 0A00      		.string	"\n"
+ 725               	__c.1964:
+ 726 0032 4F62 7352 		.string	"ObsR:"
+ 726      3A00 
+ 729               	__c.1962:
+ 730 0038 0A00      		.string	"\n"
+ 733               	__c.1960:
+ 734 003a 4F62 734C 		.string	"ObsL:"
+ 734      3A00 
+ 737               	__c.1958:
+ 738 0040 0A00      		.string	"\n"
+ 741               	__c.1956:
+ 742 0042 4275 6D70 		.string	"BumpR:"
+ 742      523A 00
+ 745               	__c.1954:
+ 746 0049 0A00      		.string	"\n"
+ 749               	__c.1952:
+ 750 004b 4275 6D70 		.string	"BumpL:"
+ 750      4C3A 00
+ 753               	__c.1950:
+ 754 0052 0A00      		.string	"\n"
+ 757               	__c.1948:
+ 758 0054 4C69 6768 		.string	"LightR:"
+ 758      7452 3A00 
+ 761               	__c.1946:
+ 762 005c 0A00      		.string	"\n"
+ 765               	__c.1944:
+ 766 005e 4C69 6768 		.string	"LightL:"
+ 766      744C 3A00 
+ 769               	__c.1942:
+ 770 0066 0A00      		.string	"\n"
+ 773               	__c.1940:
+ 774 0068 506F 7765 		.string	"PowerR:"
+ 774      7252 3A00 
+ 777               	__c.1938:
+ 778 0070 0A00      		.string	"\n"
+ 781               	__c.1936:
+ 782 0072 506F 7765 		.string	"PowerL:"
+ 782      724C 3A00 
+ 785               	__c.1934:
+ 786 007a 0A00      		.string	"\n"
+ 789               	__c.1932:
+ 790 007c 5370 6565 		.string	"SpeedR:"
+ 790      6452 3A00 
+ 793               	__c.1930:
+ 794 0084 0A00      		.string	"\n"
+ 797               	__c.1928:
+ 798 0086 5370 6565 		.string	"SpeedL:"
+ 798      644C 3A00 
+ 801               	__c.1926:
+ 802 008e 0A00      		.string	"\n"
+ 805               	__c.1924:
+ 806 0090 4261 743A 		.string	"Bat:"
+ 806      00
+ 807               		.comm statusLEDs,1,1
+ 808               		.comm motion_status,1,1
+ 809               		.comm timer,2,1
+ 874               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 PCConnection_Base.c
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:2      *ABS*:0000003f __SREG__
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:3      *ABS*:0000003e __SP_H__
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:4      *ABS*:0000003d __SP_L__
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:5      *ABS*:00000034 __CCP__
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:18     .text:00000000 InitializeFeatures
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:53     .text:00000030 initializeConnection
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:86     .text:0000005c printSensors
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:676    .data:00000002 sendData
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:805    .progmem.data:00000090 __c.1924
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:801    .progmem.data:0000008e __c.1926
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:797    .progmem.data:00000086 __c.1928
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:793    .progmem.data:00000084 __c.1930
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:789    .progmem.data:0000007c __c.1932
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:785    .progmem.data:0000007a __c.1934
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:781    .progmem.data:00000072 __c.1936
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:777    .progmem.data:00000070 __c.1938
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:773    .progmem.data:00000068 __c.1940
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:769    .progmem.data:00000066 __c.1942
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:765    .progmem.data:0000005e __c.1944
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:761    .progmem.data:0000005c __c.1946
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:757    .progmem.data:00000054 __c.1948
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:753    .progmem.data:00000052 __c.1950
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:749    .progmem.data:0000004b __c.1952
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:745    .progmem.data:00000049 __c.1954
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:741    .progmem.data:00000042 __c.1956
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:737    .progmem.data:00000040 __c.1958
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:733    .progmem.data:0000003a __c.1960
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:729    .progmem.data:00000038 __c.1962
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:725    .progmem.data:00000032 __c.1964
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:721    .progmem.data:00000030 __c.1966
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:717    .progmem.data:0000002a __c.1968
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:713    .progmem.data:00000028 __c.1970
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:709    .progmem.data:00000022 __c.1972
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:705    .progmem.data:00000020 __c.1974
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:701    .progmem.data:00000018 __c.1976
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:697    .progmem.data:00000016 __c.1978
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:693    .progmem.data:0000000e __c.1980
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:689    .progmem.data:0000000c __c.1982
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:685    .progmem.data:00000002 __c.1984
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:681    .progmem.data:00000000 __c.1986
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:325    .text:00000256 SendDebugData
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:671    .data:00000000 timeBetweenFrames
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:349    .text:0000027a task_Commands
+C:\Users\Fabian\AppData\Local\Temp/cckQfX8X.s:636    .text:0000044e task_PCConnection
+                            *COM*:00000001 statusLEDs
+                            *COM*:00000001 motion_status
+                            *COM*:00000002 timer
+
+UNDEFINED SYMBOLS
+HasRP6
+HasM32
+HasM128
+HasServoM32
+HasServoM128
+HasLCDM32
+HasLCDM128
+HasSRF02
+HasSRF02_1
+HasSRF02_2
+HasSRF08
+__I2CTWI_initMaster
+stopwatches
+StartDataFrame
+writeNStringP
+adcBat
+writeInteger
+mleft_speed
+mright_speed
+adcMotorCurrentLeft
+adcMotorCurrentRight
+adcLSL
+adcLSR
+bumper_left
+bumper_right
+obstacle_left
+obstacle_right
+adc0
+adc1
+bumper_back_left
+bumper_back_right
+SRF02_Dist
+EndDataFrame
+getBufferLength
+readChar
+mSleep
+counter
+text
+getCommand
+params
+moveAtSpeed
+changeDirection
+setLEDs
+stop
+setACSPwrOff
+setACSPwrLow
+setACSPwrMed
+setACSPwrHigh
+TestLEDs
+TestMotor
+TestBattery
+TestACS
+TestBumper
+TestLightSensor
+task_SRF02
+SerialHeartBeat
+__do_copy_data
+__do_clear_bss

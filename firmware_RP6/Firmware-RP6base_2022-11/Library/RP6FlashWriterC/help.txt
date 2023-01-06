@@ -1,0 +1,32 @@
+
+Syntax:
+rp6flashwriter [options]
+
+Available options:
+
+-help
+	Displays this helpfile
+
+-f [filepath]
+	Filepath ist a path to a hexfile or C-sourcecode
+	(If you set the sourcecodepath the hexfile has to be
+	in the same folder as the hexfile!)
+	Example: RP6FlashWriterC -f "C:\User\MyUser\MyProgram\MyProgram.hex"
+
+-p [port]
+	Port is the name of the port
+	Example: RP6FlashWriterC -p COM2
+
+-debuglevel [level]
+	Level is a number from 0 to 5 wich enables you to set how
+	much information on flashing do you want to see
+	Example: RP6FlashWriterC -debuglevel 3
+
+-slow
+	Sets slow-speed for flashing
+	(38400 baud instead of 500000 baud)
+
+-save
+	Saves the current parameters to the rp6flashwriter.conf-file
+	After saving you are able to provide only the path of the hexfile,
+	all other parameters are read from the saved file

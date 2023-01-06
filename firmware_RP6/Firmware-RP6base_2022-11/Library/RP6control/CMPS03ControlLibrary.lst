@@ -1,0 +1,98 @@
+   1               		.file	"CMPS03ControlLibrary.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	task_CMPS03
+  18               	task_CMPS03:
+  19               	.LFB7:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 80EC      		ldi r24,lo8(-64)
+  25 0002 6EED      		ldi r22,lo8(-34)
+  26 0004 41E0      		ldi r20,lo8(1)
+  27 0006 0E94 0000 		call I2CTWI_requestDataFromDevice
+  28               	/* epilogue start */
+  29               	.LM3:
+  30 000a 0895      		ret
+  31               	.LFE7:
+  33               	.global	checkCMPS03Status
+  35               	checkCMPS03Status:
+  36               	.LFB6:
+  37               	.LM4:
+  38               	.LVL0:
+  39 000c 1F93      		push r17
+  40 000e DF93      		push r29
+  41 0010 CF93      		push r28
+  42 0012 00D0      		rcall .
+  43 0014 0F92      		push __tmp_reg__
+  44 0016 CDB7      		in r28,__SP_L__
+  45 0018 DEB7      		in r29,__SP_H__
+  46               	/* prologue: function */
+  47               	/* frame size = 3 */
+  48 001a 182F      		mov r17,r24
+  49               	.LM5:
+  50 001c 80EC      		ldi r24,lo8(-64)
+  51               	.LVL1:
+  52 001e 62E0      		ldi r22,lo8(2)
+  53 0020 0E94 0000 		call I2CTWI_transmitByte
+  54               	.LM6:
+  55 0024 1E3D      		cpi r17,lo8(-34)
+  56 0026 01F4      		brne .L5
+  57               	.LM7:
+  58 0028 80EC      		ldi r24,lo8(-64)
+  59 002a BE01      		movw r22,r28
+  60 002c 6F5F      		subi r22,lo8(-(1))
+  61 002e 7F4F      		sbci r23,hi8(-(1))
+  62 0030 42E0      		ldi r20,lo8(2)
+  63 0032 0E94 0000 		call I2CTWI_readBytes
+  64               	.LM8:
+  65 0036 9981      		ldd r25,Y+1
+  66 0038 80E0      		ldi r24,lo8(0)
+  67 003a 2A81      		ldd r18,Y+2
+  68 003c 820F      		add r24,r18
+  69 003e 911D      		adc r25,__zero_reg__
+  70 0040 9093 0000 		sts (CMPS03_result)+1,r25
+  71 0044 8093 0000 		sts CMPS03_result,r24
+  72               	.L5:
+  73               	/* epilogue start */
+  74               	.LM9:
+  75 0048 0F90      		pop __tmp_reg__
+  76 004a 0F90      		pop __tmp_reg__
+  77 004c 0F90      		pop __tmp_reg__
+  78 004e CF91      		pop r28
+  79 0050 DF91      		pop r29
+  80 0052 1F91      		pop r17
+  81               	.LVL2:
+  82 0054 0895      		ret
+  83               	.LFE6:
+  85               	.global	CMPS03_result
+  86               		.data
+  89               	CMPS03_result:
+  90 0000 FFFF      		.word	-1
+  91               		.comm timer,2,1
+ 124               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 CMPS03ControlLibrary.c
+C:\Users\Ingo\AppData\Local\Temp/ccNkFECZ.s:2      *ABS*:0000003f __SREG__
+C:\Users\Ingo\AppData\Local\Temp/ccNkFECZ.s:3      *ABS*:0000003e __SP_H__
+C:\Users\Ingo\AppData\Local\Temp/ccNkFECZ.s:4      *ABS*:0000003d __SP_L__
+C:\Users\Ingo\AppData\Local\Temp/ccNkFECZ.s:5      *ABS*:00000034 __CCP__
+C:\Users\Ingo\AppData\Local\Temp/ccNkFECZ.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\Ingo\AppData\Local\Temp/ccNkFECZ.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\Ingo\AppData\Local\Temp/ccNkFECZ.s:18     .text:00000000 task_CMPS03
+C:\Users\Ingo\AppData\Local\Temp/ccNkFECZ.s:35     .text:0000000c checkCMPS03Status
+C:\Users\Ingo\AppData\Local\Temp/ccNkFECZ.s:89     .data:00000000 CMPS03_result
+                            *COM*:00000002 timer
+
+UNDEFINED SYMBOLS
+I2CTWI_requestDataFromDevice
+I2CTWI_transmitByte
+I2CTWI_readBytes
+__do_copy_data
+__do_clear_bss

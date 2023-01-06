@@ -1,0 +1,54 @@
+   1               		.file	"RP6Remotrol_Base.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	main
+  18               	main:
+  19               	.LFB2:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 0E94 0000 		call initRobotBase
+  25               	.LM3:
+  26 0004 0E94 0000 		call powerON
+  27               	.LM4:
+  28 0008 0E94 0000 		call setACSPwrHigh
+  29               	.LM5:
+  30 000c 0E94 0000 		call initializeConnection
+  31               	.L2:
+  32               	.LM6:
+  33 0010 0E94 0000 		call task_RP6System
+  34               	.LM7:
+  35 0014 0E94 0000 		call task_PCConnection
+  36 0018 00C0      		rjmp .L2
+  37               	.LFE2:
+  39               		.comm statusLEDs,1,1
+  40               		.comm motion_status,1,1
+  41               		.comm timer,2,1
+  66               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 RP6Remotrol_Base.c
+C:\Users\Fabian\AppData\Local\Temp/cc0RpyZd.s:2      *ABS*:0000003f __SREG__
+C:\Users\Fabian\AppData\Local\Temp/cc0RpyZd.s:3      *ABS*:0000003e __SP_H__
+C:\Users\Fabian\AppData\Local\Temp/cc0RpyZd.s:4      *ABS*:0000003d __SP_L__
+C:\Users\Fabian\AppData\Local\Temp/cc0RpyZd.s:5      *ABS*:00000034 __CCP__
+C:\Users\Fabian\AppData\Local\Temp/cc0RpyZd.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\Fabian\AppData\Local\Temp/cc0RpyZd.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\Fabian\AppData\Local\Temp/cc0RpyZd.s:18     .text:00000000 main
+                            *COM*:00000001 statusLEDs
+                            *COM*:00000001 motion_status
+                            *COM*:00000002 timer
+
+UNDEFINED SYMBOLS
+initRobotBase
+powerON
+setACSPwrHigh
+initializeConnection
+task_RP6System
+task_PCConnection
+__do_clear_bss

@@ -1,0 +1,195 @@
+   1               		.file	"RP6FrameLib.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	SerialHeartBeat
+  18               	SerialHeartBeat:
+  19               	.LFB9:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 80E0      		ldi r24,lo8(__c.1618)
+  25 0002 90E0      		ldi r25,hi8(__c.1618)
+  26 0004 0E94 0000 		call writeNStringP
+  27               	/* epilogue start */
+  28               	.LM3:
+  29 0008 0895      		ret
+  30               	.LFE9:
+  32               	.global	EndErrorFrame
+  34               	EndErrorFrame:
+  35               	.LFB7:
+  36               	.LM4:
+  37               	/* prologue: function */
+  38               	/* frame size = 0 */
+  39               	.LM5:
+  40 000a 80E0      		ldi r24,lo8(__c.1610)
+  41 000c 90E0      		ldi r25,hi8(__c.1610)
+  42 000e 0E94 0000 		call writeNStringP
+  43               	/* epilogue start */
+  44               	.LM6:
+  45 0012 0895      		ret
+  46               	.LFE7:
+  48               	.global	StartErrorFrame
+  50               	StartErrorFrame:
+  51               	.LFB6:
+  52               	.LM7:
+  53               	/* prologue: function */
+  54               	/* frame size = 0 */
+  55               	.LM8:
+  56 0014 80E0      		ldi r24,lo8(__c.1605)
+  57 0016 90E0      		ldi r25,hi8(__c.1605)
+  58 0018 0E94 0000 		call writeNStringP
+  59               	/* epilogue start */
+  60               	.LM9:
+  61 001c 0895      		ret
+  62               	.LFE6:
+  64               	.global	EndFirmwareFrame
+  66               	EndFirmwareFrame:
+  67               	.LFB5:
+  68               	.LM10:
+  69               	/* prologue: function */
+  70               	/* frame size = 0 */
+  71               	.LM11:
+  72 001e 80E0      		ldi r24,lo8(__c.1600)
+  73 0020 90E0      		ldi r25,hi8(__c.1600)
+  74 0022 0E94 0000 		call writeNStringP
+  75               	/* epilogue start */
+  76               	.LM12:
+  77 0026 0895      		ret
+  78               	.LFE5:
+  80               	.global	StartFirmwareFrame
+  82               	StartFirmwareFrame:
+  83               	.LFB4:
+  84               	.LM13:
+  85               	/* prologue: function */
+  86               	/* frame size = 0 */
+  87               	.LM14:
+  88 0028 80E0      		ldi r24,lo8(__c.1595)
+  89 002a 90E0      		ldi r25,hi8(__c.1595)
+  90 002c 0E94 0000 		call writeNStringP
+  91               	/* epilogue start */
+  92               	.LM15:
+  93 0030 0895      		ret
+  94               	.LFE4:
+  96               	.global	EndDataFrame
+  98               	EndDataFrame:
+  99               	.LFB3:
+ 100               	.LM16:
+ 101               	/* prologue: function */
+ 102               	/* frame size = 0 */
+ 103               	.LM17:
+ 104 0032 80E0      		ldi r24,lo8(__c.1590)
+ 105 0034 90E0      		ldi r25,hi8(__c.1590)
+ 106 0036 0E94 0000 		call writeNStringP
+ 107               	/* epilogue start */
+ 108               	.LM18:
+ 109 003a 0895      		ret
+ 110               	.LFE3:
+ 112               	.global	StartDataFrame
+ 114               	StartDataFrame:
+ 115               	.LFB2:
+ 116               	.LM19:
+ 117               	/* prologue: function */
+ 118               	/* frame size = 0 */
+ 119               	.LM20:
+ 120 003c 80E0      		ldi r24,lo8(__c.1585)
+ 121 003e 90E0      		ldi r25,hi8(__c.1585)
+ 122 0040 0E94 0000 		call writeNStringP
+ 123               	/* epilogue start */
+ 124               	.LM21:
+ 125 0044 0895      		ret
+ 126               	.LFE2:
+ 128               	.global	PrintError
+ 130               	PrintError:
+ 131               	.LFB8:
+ 132               	.LM22:
+ 133               	.LVL0:
+ 134 0046 0F93      		push r16
+ 135 0048 1F93      		push r17
+ 136               	/* prologue: function */
+ 137               	/* frame size = 0 */
+ 138 004a 8C01      		movw r16,r24
+ 139               	.LBB8:
+ 140               	.LM23:
+ 141 004c 80E0      		ldi r24,lo8(__c.1605)
+ 142 004e 90E0      		ldi r25,hi8(__c.1605)
+ 143               	.LVL1:
+ 144 0050 0E94 0000 		call writeNStringP
+ 145               	.LBE8:
+ 146               	.LM24:
+ 147 0054 C801      		movw r24,r16
+ 148 0056 0E94 0000 		call writeString
+ 149               	.LBB9:
+ 150               	.LM25:
+ 151 005a 80E0      		ldi r24,lo8(__c.1610)
+ 152 005c 90E0      		ldi r25,hi8(__c.1610)
+ 153 005e 0E94 0000 		call writeNStringP
+ 154               	/* epilogue start */
+ 155               	.LBE9:
+ 156               	.LM26:
+ 157 0062 1F91      		pop r17
+ 158 0064 0F91      		pop r16
+ 159               	.LVL2:
+ 160 0066 0895      		ret
+ 161               	.LFE8:
+ 163               		.section	.progmem.data,"a",@progbits
+ 166               	__c.1618:
+ 167 0000 0A23 2A23 		.string	"\n#*#*#\n"
+ 167      2A23 0A00 
+ 170               	__c.1610:
+ 171 0008 5B2F 4552 		.string	"[/ERROR]\n"
+ 171      524F 525D 
+ 171      0A00 
+ 174               	__c.1605:
+ 175 0012 5B45 5252 		.string	"[ERROR]\n"
+ 175      4F52 5D0A 
+ 175      00
+ 178               	__c.1600:
+ 179 001b 5B2F 4649 		.string	"[/FIRMWARE]\n"
+ 179      524D 5741 
+ 179      5245 5D0A 
+ 179      00
+ 182               	__c.1595:
+ 183 0028 5B46 4952 		.string	"[FIRMWARE]\n"
+ 183      4D57 4152 
+ 183      455D 0A00 
+ 186               	__c.1590:
+ 187 0034 5B2F 4441 		.string	"[/DATA]\n"
+ 187      5441 5D0A 
+ 187      00
+ 190               	__c.1585:
+ 191 003d 5B44 4154 		.string	"[DATA]\n"
+ 191      415D 0A00 
+ 272               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 RP6FrameLib.c
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:2      *ABS*:0000003f __SREG__
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:3      *ABS*:0000003e __SP_H__
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:4      *ABS*:0000003d __SP_L__
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:5      *ABS*:00000034 __CCP__
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:18     .text:00000000 SerialHeartBeat
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:166    .progmem.data:00000000 __c.1618
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:34     .text:0000000a EndErrorFrame
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:170    .progmem.data:00000008 __c.1610
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:50     .text:00000014 StartErrorFrame
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:174    .progmem.data:00000012 __c.1605
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:66     .text:0000001e EndFirmwareFrame
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:178    .progmem.data:0000001b __c.1600
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:82     .text:00000028 StartFirmwareFrame
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:182    .progmem.data:00000028 __c.1595
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:98     .text:00000032 EndDataFrame
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:186    .progmem.data:00000034 __c.1590
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:114    .text:0000003c StartDataFrame
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:190    .progmem.data:0000003d __c.1585
+C:\Users\Fabi\AppData\Local\Temp/ccvCyhqX.s:130    .text:00000046 PrintError
+
+UNDEFINED SYMBOLS
+writeNStringP
+writeString

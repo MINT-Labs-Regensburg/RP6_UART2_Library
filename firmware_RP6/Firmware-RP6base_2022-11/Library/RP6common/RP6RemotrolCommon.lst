@@ -1,0 +1,669 @@
+   1               		.file	"RP6RemotrolCommon.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	SerialHeartBeat
+  18               	SerialHeartBeat:
+  19               	.LFB10:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 80E0      		ldi r24,lo8(__c.1655)
+  25 0002 90E0      		ldi r25,hi8(__c.1655)
+  26 0004 0E94 0000 		call writeNStringP
+  27               	/* epilogue start */
+  28               	.LM3:
+  29 0008 0895      		ret
+  30               	.LFE10:
+  32               	.global	EndDebugFrame
+  34               	EndDebugFrame:
+  35               	.LFB8:
+  36               	.LM4:
+  37               	/* prologue: function */
+  38               	/* frame size = 0 */
+  39               	.LM5:
+  40 000a 80E0      		ldi r24,lo8(__c.1647)
+  41 000c 90E0      		ldi r25,hi8(__c.1647)
+  42 000e 0E94 0000 		call writeNStringP
+  43               	/* epilogue start */
+  44               	.LM6:
+  45 0012 0895      		ret
+  46               	.LFE8:
+  48               	.global	StartDebugFrame
+  50               	StartDebugFrame:
+  51               	.LFB7:
+  52               	.LM7:
+  53               	/* prologue: function */
+  54               	/* frame size = 0 */
+  55               	.LM8:
+  56 0014 80E0      		ldi r24,lo8(__c.1642)
+  57 0016 90E0      		ldi r25,hi8(__c.1642)
+  58 0018 0E94 0000 		call writeNStringP
+  59               	/* epilogue start */
+  60               	.LM9:
+  61 001c 0895      		ret
+  62               	.LFE7:
+  64               	.global	EndErrorFrame
+  66               	EndErrorFrame:
+  67               	.LFB5:
+  68               	.LM10:
+  69               	/* prologue: function */
+  70               	/* frame size = 0 */
+  71               	.LM11:
+  72 001e 80E0      		ldi r24,lo8(__c.1634)
+  73 0020 90E0      		ldi r25,hi8(__c.1634)
+  74 0022 0E94 0000 		call writeNStringP
+  75               	/* epilogue start */
+  76               	.LM12:
+  77 0026 0895      		ret
+  78               	.LFE5:
+  80               	.global	StartErrorFrame
+  82               	StartErrorFrame:
+  83               	.LFB4:
+  84               	.LM13:
+  85               	/* prologue: function */
+  86               	/* frame size = 0 */
+  87               	.LM14:
+  88 0028 80E0      		ldi r24,lo8(__c.1629)
+  89 002a 90E0      		ldi r25,hi8(__c.1629)
+  90 002c 0E94 0000 		call writeNStringP
+  91               	/* epilogue start */
+  92               	.LM15:
+  93 0030 0895      		ret
+  94               	.LFE4:
+  96               	.global	EndDataFrame
+  98               	EndDataFrame:
+  99               	.LFB3:
+ 100               	.LM16:
+ 101               	/* prologue: function */
+ 102               	/* frame size = 0 */
+ 103               	.LM17:
+ 104 0032 80E0      		ldi r24,lo8(__c.1624)
+ 105 0034 90E0      		ldi r25,hi8(__c.1624)
+ 106 0036 0E94 0000 		call writeNStringP
+ 107               	/* epilogue start */
+ 108               	.LM18:
+ 109 003a 0895      		ret
+ 110               	.LFE3:
+ 112               	.global	StartDataFrame
+ 114               	StartDataFrame:
+ 115               	.LFB2:
+ 116               	.LM19:
+ 117               	/* prologue: function */
+ 118               	/* frame size = 0 */
+ 119               	.LM20:
+ 120 003c 80E0      		ldi r24,lo8(__c.1619)
+ 121 003e 90E0      		ldi r25,hi8(__c.1619)
+ 122 0040 0E94 0000 		call writeNStringP
+ 123               	/* epilogue start */
+ 124               	.LM21:
+ 125 0044 0895      		ret
+ 126               	.LFE2:
+ 128               	.global	printOK
+ 130               	printOK:
+ 131               	.LFB12:
+ 132               	.LM22:
+ 133               	.LVL0:
+ 134 0046 EF92      		push r14
+ 135 0048 FF92      		push r15
+ 136 004a 0F93      		push r16
+ 137 004c 1F93      		push r17
+ 138               	/* prologue: function */
+ 139               	/* frame size = 0 */
+ 140 004e 8C01      		movw r16,r24
+ 141 0050 7B01      		movw r14,r22
+ 142               	.LM23:
+ 143 0052 80E0      		ldi r24,lo8(__c.1698)
+ 144 0054 90E0      		ldi r25,hi8(__c.1698)
+ 145               	.LVL1:
+ 146 0056 0E94 0000 		call writeNStringP
+ 147               	.LVL2:
+ 148               	.LM24:
+ 149 005a C801      		movw r24,r16
+ 150 005c 6AE0      		ldi r22,lo8(10)
+ 151 005e 0E94 0000 		call writeInteger
+ 152               	.LM25:
+ 153 0062 80E0      		ldi r24,lo8(__c.1700)
+ 154 0064 90E0      		ldi r25,hi8(__c.1700)
+ 155 0066 0E94 0000 		call writeNStringP
+ 156               	.LM26:
+ 157 006a C701      		movw r24,r14
+ 158 006c 6AE0      		ldi r22,lo8(10)
+ 159 006e 0E94 0000 		call writeInteger
+ 160               	.LM27:
+ 161 0072 80E0      		ldi r24,lo8(__c.1702)
+ 162 0074 90E0      		ldi r25,hi8(__c.1702)
+ 163 0076 0E94 0000 		call writeNStringP
+ 164               	/* epilogue start */
+ 165               	.LM28:
+ 166 007a 1F91      		pop r17
+ 167 007c 0F91      		pop r16
+ 168               	.LVL3:
+ 169 007e FF90      		pop r15
+ 170 0080 EF90      		pop r14
+ 171               	.LVL4:
+ 172 0082 0895      		ret
+ 173               	.LFE12:
+ 175               	.global	cmdsplit
+ 177               	cmdsplit:
+ 178               	.LFB11:
+ 179               	.LM29:
+ 180               	.LVL5:
+ 181 0084 AF92      		push r10
+ 182 0086 BF92      		push r11
+ 183 0088 CF92      		push r12
+ 184 008a DF92      		push r13
+ 185 008c EF92      		push r14
+ 186 008e FF92      		push r15
+ 187 0090 0F93      		push r16
+ 188 0092 1F93      		push r17
+ 189 0094 CF93      		push r28
+ 190 0096 DF93      		push r29
+ 191               	/* prologue: function */
+ 192               	/* frame size = 0 */
+ 193 0098 6C01      		movw r12,r24
+ 194               	.LBB25:
+ 195               	.LM30:
+ 196 009a 8FEF      		ldi r24,lo8(-1)
+ 197 009c 9FEF      		ldi r25,hi8(-1)
+ 198               	.LVL6:
+ 199 009e 9093 0000 		sts (params)+1,r25
+ 200 00a2 8093 0000 		sts params,r24
+ 201 00a6 9093 0000 		sts (params+2)+1,r25
+ 202 00aa 8093 0000 		sts params+2,r24
+ 203 00ae 9093 0000 		sts (params+4)+1,r25
+ 204 00b2 8093 0000 		sts params+4,r24
+ 205 00b6 9093 0000 		sts (params+6)+1,r25
+ 206 00ba 8093 0000 		sts params+6,r24
+ 207 00be 9093 0000 		sts (params+8)+1,r25
+ 208 00c2 8093 0000 		sts params+8,r24
+ 209 00c6 9093 0000 		sts (params+10)+1,r25
+ 210 00ca 8093 0000 		sts params+10,r24
+ 211               	.LBE25:
+ 212               	.LM31:
+ 213 00ce C114      		cp r12,__zero_reg__
+ 214 00d0 D104      		cpc r13,__zero_reg__
+ 215 00d2 01F0      		breq .L18
+ 216 00d4 F601      		movw r30,r12
+ 217 00d6 8081      		ld r24,Z
+ 218 00d8 8332      		cpi r24,lo8(35)
+ 219 00da 01F4      		brne .L18
+ 220 00dc 80E0      		ldi r24,lo8(params)
+ 221 00de E82E      		mov r14,r24
+ 222 00e0 80E0      		ldi r24,hi8(params)
+ 223 00e2 F82E      		mov r15,r24
+ 224 00e4 C0E0      		ldi r28,lo8(0)
+ 225 00e6 D0E0      		ldi r29,hi8(0)
+ 226               	.LVL7:
+ 227 00e8 00E0      		ldi r16,lo8(0)
+ 228 00ea 10E0      		ldi r17,hi8(0)
+ 229               	.LVL8:
+ 230 00ec 00C0      		rjmp .L19
+ 231               	.L24:
+ 232               	.LBB26:
+ 233               	.LM32:
+ 234 00ee 2196      		adiw r28,1
+ 235               	.LM33:
+ 236 00f0 C601      		movw r24,r12
+ 237 00f2 8C0F      		add r24,r28
+ 238 00f4 9D1F      		adc r25,r29
+ 239 00f6 0E94 0000 		call atoi
+ 240 00fa F701      		movw r30,r14
+ 241 00fc 9183      		std Z+1,r25
+ 242 00fe 8083      		st Z,r24
+ 243               	.LM34:
+ 244 0100 0630      		cpi r16,6
+ 245 0102 1105      		cpc r17,__zero_reg__
+ 246 0104 01F0      		breq .L18
+ 247               	.LM35:
+ 248 0106 0F5F      		subi r16,lo8(-(1))
+ 249 0108 1F4F      		sbci r17,hi8(-(1))
+ 250 010a F501      		movw r30,r10
+ 251 010c 00C0      		rjmp .L20
+ 252               	.L22:
+ 253               	.LM36:
+ 254 010e 2196      		adiw r28,1
+ 255               	.L20:
+ 256               	.LM37:
+ 257 0110 8181      		ldd r24,Z+1
+ 258 0112 8A33      		cpi r24,lo8(58)
+ 259 0114 01F0      		breq .L21
+ 260 0116 8A32      		cpi r24,lo8(42)
+ 261 0118 01F0      		breq .L21
+ 262 011a 3196      		adiw r30,1
+ 263 011c 8823      		tst r24
+ 264 011e 01F4      		brne .L22
+ 265               	.L21:
+ 266 0120 82E0      		ldi r24,lo8(2)
+ 267 0122 90E0      		ldi r25,hi8(2)
+ 268 0124 E80E      		add r14,r24
+ 269 0126 F91E      		adc r15,r25
+ 270               	.L19:
+ 271               	.LBE26:
+ 272               	.LM38:
+ 273 0128 5601      		movw r10,r12
+ 274 012a AC0E      		add r10,r28
+ 275 012c BD1E      		adc r11,r29
+ 276 012e F501      		movw r30,r10
+ 277 0130 8081      		ld r24,Z
+ 278 0132 8823      		tst r24
+ 279 0134 01F0      		breq .L23
+ 280 0136 8A32      		cpi r24,lo8(42)
+ 281 0138 01F4      		brne .L24
+ 282 013a 00C0      		rjmp .L23
+ 283               	.L18:
+ 284 013c 0FEF      		ldi r16,lo8(-1)
+ 285 013e 1FEF      		ldi r17,hi8(-1)
+ 286               	.L23:
+ 287               	.LM39:
+ 288 0140 C801      		movw r24,r16
+ 289               	.LVL9:
+ 290               	/* epilogue start */
+ 291 0142 DF91      		pop r29
+ 292 0144 CF91      		pop r28
+ 293               	.LVL10:
+ 294 0146 1F91      		pop r17
+ 295 0148 0F91      		pop r16
+ 296 014a FF90      		pop r15
+ 297 014c EF90      		pop r14
+ 298 014e DF90      		pop r13
+ 299 0150 CF90      		pop r12
+ 300               	.LVL11:
+ 301 0152 BF90      		pop r11
+ 302 0154 AF90      		pop r10
+ 303 0156 0895      		ret
+ 304               	.LFE11:
+ 306               	.global	PrintDebug
+ 308               	PrintDebug:
+ 309               	.LFB9:
+ 310               	.LM40:
+ 311               	.LVL12:
+ 312 0158 0F93      		push r16
+ 313 015a 1F93      		push r17
+ 314               	/* prologue: function */
+ 315               	/* frame size = 0 */
+ 316 015c 8C01      		movw r16,r24
+ 317               	.LBB27:
+ 318               	.LM41:
+ 319 015e 80E0      		ldi r24,lo8(__c.1642)
+ 320 0160 90E0      		ldi r25,hi8(__c.1642)
+ 321               	.LVL13:
+ 322 0162 0E94 0000 		call writeNStringP
+ 323               	.LBE27:
+ 324               	.LM42:
+ 325 0166 C801      		movw r24,r16
+ 326 0168 0E94 0000 		call writeString
+ 327               	.LBB28:
+ 328               	.LM43:
+ 329 016c 80E0      		ldi r24,lo8(__c.1647)
+ 330 016e 90E0      		ldi r25,hi8(__c.1647)
+ 331 0170 0E94 0000 		call writeNStringP
+ 332               	/* epilogue start */
+ 333               	.LBE28:
+ 334               	.LM44:
+ 335 0174 1F91      		pop r17
+ 336 0176 0F91      		pop r16
+ 337               	.LVL14:
+ 338 0178 0895      		ret
+ 339               	.LFE9:
+ 341               		.data
+ 342               	.LC0:
+ 343 0000 5265 7365 		.string	"Resetting ID-Counter"
+ 343      7474 696E 
+ 343      6720 4944 
+ 343      2D43 6F75 
+ 343      6E74 6572 
+ 344               	.LC1:
+ 345 0015 4368 616E 		.string	"Changing lastID from 99 to -1"
+ 345      6769 6E67 
+ 345      206C 6173 
+ 345      7449 4420 
+ 345      6672 6F6D 
+ 346               		.text
+ 347               	.global	getCommand
+ 349               	getCommand:
+ 350               	.LFB13:
+ 351               	.LM45:
+ 352 017a 0F93      		push r16
+ 353 017c 1F93      		push r17
+ 354 017e CF93      		push r28
+ 355 0180 DF93      		push r29
+ 356               	/* prologue: function */
+ 357               	/* frame size = 0 */
+ 358               	.LM46:
+ 359 0182 00E0      		ldi r16,lo8(text)
+ 360 0184 10E0      		ldi r17,hi8(text)
+ 361 0186 F801      		movw r30,r16
+ 362 0188 0190      		ld __tmp_reg__,Z+
+ 363 018a 0020      		tst __tmp_reg__
+ 364 018c 01F4      		brne .-6
+ 365 018e 3297      		sbiw r30,2
+ 366 0190 8081      		ld r24,Z
+ 367 0192 8A32      		cpi r24,lo8(42)
+ 368 0194 01F0      		breq .+2
+ 369 0196 00C0      		rjmp .L37
+ 370               	.L29:
+ 371               	.LBB29:
+ 372               	.LM47:
+ 373 0198 C801      		movw r24,r16
+ 374 019a 0E94 0000 		call cmdsplit
+ 375               	.LM48:
+ 376 019e FC01      		movw r30,r24
+ 377 01a0 EE0F      		lsl r30
+ 378 01a2 FF1F      		rol r31
+ 379 01a4 E050      		subi r30,lo8(-(params-2))
+ 380 01a6 F040      		sbci r31,hi8(-(params-2))
+ 381 01a8 C081      		ld r28,Z
+ 382 01aa D181      		ldd r29,Z+1
+ 383               	.LVL15:
+ 384 01ac 80E0      		ldi r24,lo8(0)
+ 385 01ae 90E0      		ldi r25,hi8(0)
+ 386               	.LVL16:
+ 387               	.LM49:
+ 388 01b0 D801      		movw r26,r16
+ 389 01b2 00C0      		rjmp .L31
+ 390               	.L32:
+ 391               	.LM50:
+ 392 01b4 FC01      		movw r30,r24
+ 393 01b6 E050      		subi r30,lo8(-(text))
+ 394 01b8 F040      		sbci r31,hi8(-(text))
+ 395 01ba 1082      		st Z,__zero_reg__
+ 396               	.LM51:
+ 397 01bc 0196      		adiw r24,1
+ 398               	.L31:
+ 399 01be FD01      		movw r30,r26
+ 400 01c0 0190      		ld __tmp_reg__,Z+
+ 401 01c2 0020      		tst __tmp_reg__
+ 402 01c4 01F4      		brne .-6
+ 403 01c6 3197      		sbiw r30,1
+ 404 01c8 E050      		subi r30,lo8(text)
+ 405 01ca F040      		sbci r31,hi8(text)
+ 406 01cc 8E17      		cp r24,r30
+ 407 01ce 9F07      		cpc r25,r31
+ 408 01d0 00F0      		brlo .L32
+ 409               	.LM52:
+ 410 01d2 1092 0000 		sts (counter)+1,__zero_reg__
+ 411 01d6 1092 0000 		sts counter,__zero_reg__
+ 412               	.LM53:
+ 413 01da 8091 0000 		lds r24,params
+ 414 01de 9091 0000 		lds r25,(params)+1
+ 415               	.LVL17:
+ 416 01e2 8336      		cpi r24,99
+ 417 01e4 9105      		cpc r25,__zero_reg__
+ 418 01e6 01F4      		brne .L33
+ 419               	.LM54:
+ 420 01e8 8FEF      		ldi r24,lo8(-1)
+ 421 01ea 9FEF      		ldi r25,hi8(-1)
+ 422 01ec 9093 0000 		sts (lastID)+1,r25
+ 423 01f0 8093 0000 		sts lastID,r24
+ 424               	.LM55:
+ 425 01f4 CE01      		movw r24,r28
+ 426 01f6 61E0      		ldi r22,lo8(1)
+ 427 01f8 70E0      		ldi r23,hi8(1)
+ 428 01fa 0E94 0000 		call printOK
+ 429               	.LM56:
+ 430 01fe 80E0      		ldi r24,lo8(.LC0)
+ 431 0200 90E0      		ldi r25,hi8(.LC0)
+ 432 0202 0E94 0000 		call PrintDebug
+ 433 0206 00C0      		rjmp .L37
+ 434               	.L33:
+ 435               	.LM57:
+ 436 0208 8091 0000 		lds r24,lastID
+ 437 020c 9091 0000 		lds r25,(lastID)+1
+ 438 0210 8C17      		cp r24,r28
+ 439 0212 9D07      		cpc r25,r29
+ 440 0214 04F4      		brge .L34
+ 441 0216 9E01      		movw r18,r28
+ 442 0218 281B      		sub r18,r24
+ 443 021a 390B      		sbc r19,r25
+ 444 021c 2530      		cpi r18,5
+ 445 021e 3105      		cpc r19,__zero_reg__
+ 446 0220 04F4      		brge .L34
+ 447               	.LM58:
+ 448 0222 CE01      		movw r24,r28
+ 449 0224 61E0      		ldi r22,lo8(1)
+ 450 0226 70E0      		ldi r23,hi8(1)
+ 451 0228 0E94 0000 		call printOK
+ 452               	.LM59:
+ 453 022c D093 0000 		sts (lastID)+1,r29
+ 454 0230 C093 0000 		sts lastID,r28
+ 455               	.LM60:
+ 456 0234 C336      		cpi r28,99
+ 457 0236 D105      		cpc r29,__zero_reg__
+ 458 0238 01F4      		brne .L35
+ 459               	.LM61:
+ 460 023a 8FEF      		ldi r24,lo8(-1)
+ 461 023c 9FEF      		ldi r25,hi8(-1)
+ 462 023e 9093 0000 		sts (lastID)+1,r25
+ 463 0242 8093 0000 		sts lastID,r24
+ 464               	.LM62:
+ 465 0246 80E0      		ldi r24,lo8(.LC1)
+ 466 0248 90E0      		ldi r25,hi8(.LC1)
+ 467 024a 0E94 0000 		call PrintDebug
+ 468               	.L35:
+ 469               	.LM63:
+ 470 024e 2091 0000 		lds r18,params
+ 471 0252 3091 0000 		lds r19,(params)+1
+ 472 0256 00C0      		rjmp .L30
+ 473               	.L34:
+ 474               	.LM64:
+ 475 0258 CE01      		movw r24,r28
+ 476 025a 62E0      		ldi r22,lo8(2)
+ 477 025c 70E0      		ldi r23,hi8(2)
+ 478 025e 0E94 0000 		call printOK
+ 479               	.LBB30:
+ 480               	.LM65:
+ 481 0262 80E0      		ldi r24,lo8(__c.1642)
+ 482 0264 90E0      		ldi r25,hi8(__c.1642)
+ 483 0266 0E94 0000 		call writeNStringP
+ 484               	.LBE30:
+ 485               	.LM66:
+ 486 026a 80E0      		ldi r24,lo8(__c.1716)
+ 487 026c 90E0      		ldi r25,hi8(__c.1716)
+ 488 026e 0E94 0000 		call writeNStringP
+ 489               	.LM67:
+ 490 0272 80E0      		ldi r24,lo8(__c.1718)
+ 491 0274 90E0      		ldi r25,hi8(__c.1718)
+ 492 0276 0E94 0000 		call writeNStringP
+ 493               	.LM68:
+ 494 027a CE01      		movw r24,r28
+ 495 027c 6AE0      		ldi r22,lo8(10)
+ 496 027e 0E94 0000 		call writeInteger
+ 497               	.LM69:
+ 498 0282 80E0      		ldi r24,lo8(__c.1720)
+ 499 0284 90E0      		ldi r25,hi8(__c.1720)
+ 500 0286 0E94 0000 		call writeNStringP
+ 501               	.LM70:
+ 502 028a 8091 0000 		lds r24,lastID
+ 503 028e 9091 0000 		lds r25,(lastID)+1
+ 504 0292 6AE0      		ldi r22,lo8(10)
+ 505 0294 0E94 0000 		call writeInteger
+ 506               	.LM71:
+ 507 0298 80E0      		ldi r24,lo8(__c.1722)
+ 508 029a 90E0      		ldi r25,hi8(__c.1722)
+ 509 029c 0E94 0000 		call writeNStringP
+ 510               	.LBB31:
+ 511               	.LM72:
+ 512 02a0 80E0      		ldi r24,lo8(__c.1647)
+ 513 02a2 90E0      		ldi r25,hi8(__c.1647)
+ 514 02a4 0E94 0000 		call writeNStringP
+ 515               	.L37:
+ 516 02a8 20E0      		ldi r18,lo8(0)
+ 517 02aa 30E0      		ldi r19,hi8(0)
+ 518               	.L30:
+ 519               	.LBE31:
+ 520               	.LBE29:
+ 521               	.LM73:
+ 522 02ac C901      		movw r24,r18
+ 523               	/* epilogue start */
+ 524 02ae DF91      		pop r29
+ 525 02b0 CF91      		pop r28
+ 526               	.LVL18:
+ 527 02b2 1F91      		pop r17
+ 528 02b4 0F91      		pop r16
+ 529 02b6 0895      		ret
+ 530               	.LFE13:
+ 532               	.global	PrintError
+ 534               	PrintError:
+ 535               	.LFB6:
+ 536               	.LM74:
+ 537               	.LVL19:
+ 538 02b8 0F93      		push r16
+ 539 02ba 1F93      		push r17
+ 540               	/* prologue: function */
+ 541               	/* frame size = 0 */
+ 542 02bc 8C01      		movw r16,r24
+ 543               	.LBB32:
+ 544               	.LM75:
+ 545 02be 80E0      		ldi r24,lo8(__c.1629)
+ 546 02c0 90E0      		ldi r25,hi8(__c.1629)
+ 547               	.LVL20:
+ 548 02c2 0E94 0000 		call writeNStringP
+ 549               	.LBE32:
+ 550               	.LM76:
+ 551 02c6 C801      		movw r24,r16
+ 552 02c8 0E94 0000 		call writeString
+ 553               	.LBB33:
+ 554               	.LM77:
+ 555 02cc 80E0      		ldi r24,lo8(__c.1634)
+ 556 02ce 90E0      		ldi r25,hi8(__c.1634)
+ 557 02d0 0E94 0000 		call writeNStringP
+ 558               	/* epilogue start */
+ 559               	.LBE33:
+ 560               	.LM78:
+ 561 02d4 1F91      		pop r17
+ 562 02d6 0F91      		pop r16
+ 563               	.LVL21:
+ 564 02d8 0895      		ret
+ 565               	.LFE6:
+ 567               	.global	counter
+ 568               	.global	counter
+ 569               		.section .bss
+ 572               	counter:
+ 573 0000 0000      		.skip 2,0
+ 574               		.section	.progmem.data,"a",@progbits
+ 577               	__c.1722:
+ 578 0000 0D0A 00   		.string	"\r\n"
+ 581               	__c.1720:
+ 582 0003 204C 6173 		.string	" LastID: "
+ 582      7449 443A 
+ 582      2000 
+ 585               	__c.1718:
+ 586 000d 4944 3A20 		.string	"ID: "
+ 586      00
+ 589               	__c.1716:
+ 590 0012 5772 6F6E 		.string	"Wrong ID received! Details:\r\n"
+ 590      6720 4944 
+ 590      2072 6563 
+ 590      6569 7665 
+ 590      6421 2044 
+ 593               	__c.1702:
+ 594 0030 3E0A 00   		.string	">\n"
+ 597               	__c.1700:
+ 598 0033 7C00      		.string	"|"
+ 601               	__c.1698:
+ 602 0035 0A3C 4F4B 		.string	"\n<OK|"
+ 602      7C00 
+ 605               	__c.1655:
+ 606 003b 0A23 2A23 		.string	"\n#*#*#\n"
+ 606      2A23 0A00 
+ 609               	__c.1647:
+ 610 0043 5B2F 4445 		.string	"[/DEBUG]\n"
+ 610      4255 475D 
+ 610      0A00 
+ 613               	__c.1642:
+ 614 004d 5B44 4542 		.string	"[DEBUG]\n"
+ 614      5547 5D0A 
+ 614      00
+ 617               	__c.1634:
+ 618 0056 5B2F 4552 		.string	"[/ERROR]\n"
+ 618      524F 525D 
+ 618      0A00 
+ 621               	__c.1629:
+ 622 0060 5B45 5252 		.string	"[ERROR]\n"
+ 622      4F52 5D0A 
+ 622      00
+ 625               	__c.1624:
+ 626 0069 5B2F 4441 		.string	"[/DATA]\n"
+ 626      5441 5D0A 
+ 626      00
+ 629               	__c.1619:
+ 630 0072 5B44 4154 		.string	"[DATA]\n"
+ 630      415D 0A00 
+ 631               		.comm text,50,1
+ 632               		.comm params,12,1
+ 633               		.comm HasRP6,1,1
+ 634               		.comm HasM32,1,1
+ 635               		.comm HasM128,1,1
+ 636               		.comm HasServoM32,1,1
+ 637               		.comm HasServoM128,1,1
+ 638               		.comm HasLCDM32,1,1
+ 639               		.comm HasLCDM128,1,1
+ 640               		.comm HasSRF02,1,1
+ 641               		.comm HasSRF02_1,1,1
+ 642               		.comm HasSRF02_2,1,1
+ 643               		.comm HasSRF08,1,1
+ 644               		.comm lastID,2,1
+ 757               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 RP6RemotrolCommon.c
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:2      *ABS*:0000003f __SREG__
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:3      *ABS*:0000003e __SP_H__
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:4      *ABS*:0000003d __SP_L__
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:5      *ABS*:00000034 __CCP__
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:18     .text:00000000 SerialHeartBeat
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:605    .progmem.data:0000003b __c.1655
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:34     .text:0000000a EndDebugFrame
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:609    .progmem.data:00000043 __c.1647
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:50     .text:00000014 StartDebugFrame
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:613    .progmem.data:0000004d __c.1642
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:66     .text:0000001e EndErrorFrame
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:617    .progmem.data:00000056 __c.1634
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:82     .text:00000028 StartErrorFrame
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:621    .progmem.data:00000060 __c.1629
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:98     .text:00000032 EndDataFrame
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:625    .progmem.data:00000069 __c.1624
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:114    .text:0000003c StartDataFrame
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:629    .progmem.data:00000072 __c.1619
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:130    .text:00000046 printOK
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:601    .progmem.data:00000035 __c.1698
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:597    .progmem.data:00000033 __c.1700
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:593    .progmem.data:00000030 __c.1702
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:177    .text:00000084 cmdsplit
+                            *COM*:0000000c params
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:308    .text:00000158 PrintDebug
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:349    .text:0000017a getCommand
+                            *COM*:00000032 text
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:572    .bss:00000000 counter
+                            *COM*:00000002 lastID
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:589    .progmem.data:00000012 __c.1716
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:585    .progmem.data:0000000d __c.1718
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:581    .progmem.data:00000003 __c.1720
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:577    .progmem.data:00000000 __c.1722
+C:\Users\Fabian\AppData\Local\Temp/cc6vFRuX.s:534    .text:000002b8 PrintError
+                            *COM*:00000001 HasRP6
+                            *COM*:00000001 HasM32
+                            *COM*:00000001 HasM128
+                            *COM*:00000001 HasServoM32
+                            *COM*:00000001 HasServoM128
+                            *COM*:00000001 HasLCDM32
+                            *COM*:00000001 HasLCDM128
+                            *COM*:00000001 HasSRF02
+                            *COM*:00000001 HasSRF02_1
+                            *COM*:00000001 HasSRF02_2
+                            *COM*:00000001 HasSRF08
+
+UNDEFINED SYMBOLS
+writeNStringP
+writeInteger
+atoi
+writeString
+__do_copy_data
+__do_clear_bss
