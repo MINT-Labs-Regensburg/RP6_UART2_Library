@@ -149,7 +149,7 @@ class RP6 {
   
   private:  // private members of the class, only inside the class available
     int getIDcounter();	  // get the correct ID counter
-	void parseData();     // parse the data from getData() public function
+    void parseData();     // parse the data from getData() public function
     int _startPin;        // connect to ST1 to start the RP6
     int _resetPin;        // connect to ST2 to reset the RP6
     int _RXD2;            // for second UART
