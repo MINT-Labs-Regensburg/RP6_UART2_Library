@@ -44,6 +44,18 @@ void RP6::begin(int startPin, int resetPin, int RXD2, int TXD2){
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+// get the correct ID counter
+int RP6::getIDcounter(){
+	_id_counter++;
+	if (_id_counter >= 99) {
+		_id_counter = 0;
+		Serial2.println("#99:99*");
+		return _id_counter;
+	}
+	else return _id_counter;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 // start the RP6
 void RP6::start(){
   _id_counter = 0; // id_counter zurücksetzen!
@@ -63,30 +75,26 @@ void RP6::reset(){
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 // stop the drive system
 void RP6::stop(){
-  Serial2.println("#" + String(CMD_SET_STOP) + ":" + String(_id_counter) + "*");
-  _id_counter++;
+  Serial2.println("#" + String(CMD_SET_STOP) + ":" + String(getIDcounter()) + "*");
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 // drive any direction
 void RP6::drive(int speedL, int speedR, int dir){
-  Serial2.println("#" + String(CMD_SET_SPEED) + ":" + String(speedL) + ":" + String(speedR) + ":" + String(dir) + ":" + String(_id_counter) + "*");
-  _id_counter++;
+  Serial2.println("#" + String(CMD_SET_SPEED) + ":" + String(speedL) + ":" + String(speedR) + ":" + String(dir) + ":" + String(getIDcounter()) + "*");
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 // set the six status LEDs, called SL1 to SL6
 void RP6::setLEDs(bool sl1, bool sl2, bool sl3, bool sl4, bool sl5, bool sl6){  
-  Serial2.println("#" + String(CMD_SET_LEDS) + ":" + String(CMD_RP6_BASE) + ":" + String(sl1|sl2<<1|sl3<<2|sl4<<3|sl5<<4|sl6<<5) + ":" + String(_id_counter) + "*");
-  _id_counter++;
+  Serial2.println("#" + String(CMD_SET_LEDS) + ":" + String(CMD_RP6_BASE) + ":" + String(sl1|sl2<<1|sl3<<2|sl4<<3|sl5<<4|sl6<<5) + ":" + String(getIDcounter()) + "*");
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 // set one of the six status LEDs, called SL1 to SL6
 void RP6::setLED(int sl, bool onoff){  
   sLEDs[sl-1] = onoff;
-  Serial2.println("#" + String(CMD_SET_LEDS) + ":" + String(CMD_RP6_BASE) + ":" + String(sLEDs[0]|sLEDs[1]<<1|sLEDs[2]<<2|sLEDs[3]<<3|sLEDs[4]<<4|sLEDs[5]<<5) + ":" + String(_id_counter) + "*");
-  _id_counter++;
+  Serial2.println("#" + String(CMD_SET_LEDS) + ":" + String(CMD_RP6_BASE) + ":" + String(sLEDs[0]|sLEDs[1]<<1|sLEDs[2]<<2|sLEDs[3]<<3|sLEDs[4]<<4|sLEDs[5]<<5) + ":" + String(getIDcounter()) + "*");
 }
 
 

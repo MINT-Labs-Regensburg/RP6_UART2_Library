@@ -87,7 +87,7 @@
 // Command Defines
 #define CMD_SET_SPEED               1 //#1:100:50:0:id* -> #set speed (1):left (100):right (50):forward (0):id*
 #define CMD_SET_SERVO               2 
-#define CMD_SET_LEDS                3 //#3:1:2:id* switches LED "2" on RP6Base ("1") ; #3:1:0:id* 
+#define CMD_SET_LEDS                3 //#3:1:2:id* switches on the LED "2" on RP6Base ("1"), all others off ; #3:1:0:id* 
 #define CMD_SET_BEEP                4
 #define CMD_SET_START_MELODY        5
 #define CMD_SET_FEATURE             6
@@ -148,12 +148,13 @@ class RP6 {
     void setLED(int sl, bool onoff); 
   
   private:  // private members of the class, only inside the class available
-    void parseData();     // parse the data from getData() public function
+    int getIDcounter();	  // get the correct ID counter
+	void parseData();     // parse the data from getData() public function
     int _startPin;        // connect to ST1 to start the RP6
     int _resetPin;        // connect to ST2 to reset the RP6
     int _RXD2;            // for second UART
     int _TXD2;            // for second UART
-    int _id_counter;
+	int _id_counter;
     String _dataReceived;
     DataArray _dataRP6;
 };
