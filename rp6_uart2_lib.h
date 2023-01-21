@@ -154,7 +154,7 @@ class RP6 {
     int _resetPin;        // connect to ST2 to reset the RP6
     int _RXD2;            // for second UART
     int _TXD2;            // for second UART
-	int _id_counter;
+    int _id_counter;
     String _dataReceived;
     DataArray _dataRP6;
 };
